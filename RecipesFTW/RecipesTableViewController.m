@@ -9,6 +9,9 @@
 #import "RecipesTableViewController.h"
 #import "ViewControllerConfigurator.h"
 
+#import "RecipeCell.h"
+#import "RecipeManager.h"
+
 @interface RecipesTableViewController()<UITableViewDataSource, UITableViewDelegate>
 
 @end
@@ -22,6 +25,12 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    [[RecipeManager shared] loadRecipesWithCompletition:^{
+        [self reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (IBAction)menuHandler:(id)sender
@@ -29,6 +38,14 @@
     [ViewControllerConfigurator swipeRightFrom:self];
 }
 
+
+
+#pragma mark - private
+
+- (void) reloadData
+{
+    [self.tableView reloadData];
+}
 
 
 
@@ -41,14 +58,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [[RecipeManager shared].arrayRecipes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* _cell = [tableView dequeueReusableCellWithIdentifier:@"RecipeCell"];
+    RecipeCell* _cell = [tableView dequeueReusableCellWithIdentifier:@"RecipeCell"];
     
-    _cell.textLabel.text = @"zaozza";
+    Recipe* _recipe = [[RecipeManager shared].arrayRecipes objectAtIndex:indexPath.row];
+    _cell.recipe = _recipe;
     
     return _cell;
 }

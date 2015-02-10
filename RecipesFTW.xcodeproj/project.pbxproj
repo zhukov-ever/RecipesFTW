@@ -13,6 +13,12 @@
 		CD1F50331A8A871300AC1D6A /* ViewControllerConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50321A8A871300AC1D6A /* ViewControllerConfigurator.m */; };
 		CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50361A8A87B300AC1D6A /* PresentationViewController.m */; };
 		CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F503A1A8A885100AC1D6A /* AboutViewController.m */; };
+		CD1F503F1A8A914900AC1D6A /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F503E1A8A914900AC1D6A /* Recipe.m */; };
+		CD1F50481A8A918200AC1D6A /* NVBaseSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50441A8A918200AC1D6A /* NVBaseSingleton.m */; };
+		CD1F50491A8A918200AC1D6A /* UIColor+NVProps.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50471A8A918200AC1D6A /* UIColor+NVProps.m */; };
+		CD1F504C1A8A926900AC1D6A /* RecipeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F504B1A8A926900AC1D6A /* RecipeManager.m */; };
+		CD1F504F1A8A9B8800AC1D6A /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F504E1A8A9B8800AC1D6A /* RecipeCell.m */; };
+		CD1F50531A8A9EEA00AC1D6A /* ObjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50521A8A9EEA00AC1D6A /* ObjectParser.m */; };
 		CD8F11A21A8A788700374E4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A11A8A788700374E4E /* main.m */; };
 		CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A41A8A788700374E4E /* AppDelegate.m */; };
 		CD8F11AB1A8A788700374E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11A91A8A788700374E4E /* Main.storyboard */; };
@@ -32,6 +38,18 @@
 		CD1F50361A8A87B300AC1D6A /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
 		CD1F50391A8A885100AC1D6A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		CD1F503A1A8A885100AC1D6A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		CD1F503D1A8A914900AC1D6A /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		CD1F503E1A8A914900AC1D6A /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		CD1F50431A8A918200AC1D6A /* NVBaseSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVBaseSingleton.h; sourceTree = "<group>"; };
+		CD1F50441A8A918200AC1D6A /* NVBaseSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVBaseSingleton.m; sourceTree = "<group>"; };
+		CD1F50461A8A918200AC1D6A /* UIColor+NVProps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NVProps.h"; sourceTree = "<group>"; };
+		CD1F50471A8A918200AC1D6A /* UIColor+NVProps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NVProps.m"; sourceTree = "<group>"; };
+		CD1F504A1A8A926900AC1D6A /* RecipeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeManager.h; sourceTree = "<group>"; };
+		CD1F504B1A8A926900AC1D6A /* RecipeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeManager.m; sourceTree = "<group>"; };
+		CD1F504D1A8A9B8800AC1D6A /* RecipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCell.h; sourceTree = "<group>"; };
+		CD1F504E1A8A9B8800AC1D6A /* RecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCell.m; sourceTree = "<group>"; };
+		CD1F50511A8A9EEA00AC1D6A /* ObjectParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectParser.h; sourceTree = "<group>"; };
+		CD1F50521A8A9EEA00AC1D6A /* ObjectParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectParser.m; sourceTree = "<group>"; };
 		CD8F119C1A8A788700374E4E /* RecipesFTW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesFTW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8F11A01A8A788700374E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F11A11A8A788700374E4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +95,8 @@
 		CD1F50221A8A79FF00AC1D6A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CD1F50501A8A9EC700AC1D6A /* Helpers */,
+				CD1F503C1A8A913100AC1D6A /* Recipes */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -115,6 +135,8 @@
 		CD1F50291A8A80F200AC1D6A /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				CD1F504D1A8A9B8800AC1D6A /* RecipeCell.h */,
+				CD1F504E1A8A9B8800AC1D6A /* RecipeCell.m */,
 				CD1F502D1A8A813700AC1D6A /* RecipesTableViewController.h */,
 				CD1F502E1A8A813700AC1D6A /* RecipesTableViewController.m */,
 			);
@@ -148,6 +170,53 @@
 			name = About;
 			sourceTree = "<group>";
 		};
+		CD1F503C1A8A913100AC1D6A /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F503D1A8A914900AC1D6A /* Recipe.h */,
+				CD1F503E1A8A914900AC1D6A /* Recipe.m */,
+				CD1F504A1A8A926900AC1D6A /* RecipeManager.h */,
+				CD1F504B1A8A926900AC1D6A /* RecipeManager.m */,
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		CD1F50411A8A918200AC1D6A /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50421A8A918200AC1D6A /* NVBaseSingleton */,
+				CD1F50451A8A918200AC1D6A /* NVColor */,
+			);
+			path = Libs;
+			sourceTree = SOURCE_ROOT;
+		};
+		CD1F50421A8A918200AC1D6A /* NVBaseSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50431A8A918200AC1D6A /* NVBaseSingleton.h */,
+				CD1F50441A8A918200AC1D6A /* NVBaseSingleton.m */,
+			);
+			path = NVBaseSingleton;
+			sourceTree = "<group>";
+		};
+		CD1F50451A8A918200AC1D6A /* NVColor */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50461A8A918200AC1D6A /* UIColor+NVProps.h */,
+				CD1F50471A8A918200AC1D6A /* UIColor+NVProps.m */,
+			);
+			path = NVColor;
+			sourceTree = "<group>";
+		};
+		CD1F50501A8A9EC700AC1D6A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50511A8A9EEA00AC1D6A /* ObjectParser.h */,
+				CD1F50521A8A9EEA00AC1D6A /* ObjectParser.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		CD8F11931A8A788700374E4E = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +238,7 @@
 		CD8F119E1A8A788700374E4E /* RecipesFTW */ = {
 			isa = PBXGroup;
 			children = (
+				CD1F50411A8A918200AC1D6A /* Libs */,
 				CD1F50241A8A7A1600AC1D6A /* Resources */,
 				CD1F50211A8A79F500AC1D6A /* Classes */,
 				CD8F119F1A8A788700374E4E /* Supporting Files */,
@@ -302,11 +372,17 @@
 			files = (
 				CD1F502F1A8A813700AC1D6A /* RecipesTableViewController.m in Sources */,
 				CD1F50331A8A871300AC1D6A /* ViewControllerConfigurator.m in Sources */,
+				CD1F50531A8A9EEA00AC1D6A /* ObjectParser.m in Sources */,
 				CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */,
+				CD1F504F1A8A9B8800AC1D6A /* RecipeCell.m in Sources */,
+				CD1F503F1A8A914900AC1D6A /* Recipe.m in Sources */,
 				CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */,
+				CD1F50481A8A918200AC1D6A /* NVBaseSingleton.m in Sources */,
+				CD1F50491A8A918200AC1D6A /* UIColor+NVProps.m in Sources */,
 				CD1F50281A8A80BD00AC1D6A /* MenuTableViewController.m in Sources */,
 				CD8F11A21A8A788700374E4E /* main.m in Sources */,
 				CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */,
+				CD1F504C1A8A926900AC1D6A /* RecipeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
