@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipesViewController : UIViewController
+@interface RecipesTableViewController : UITableViewController
 
 - (IBAction)menuHandler:(id)sender;
 
