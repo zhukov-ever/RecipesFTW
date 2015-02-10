@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5E5FDE4B05EBE54B5C057699 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F368D85F432D0CDDABA5D849 /* libPods.a */; };
+		CD1F50281A8A80BD00AC1D6A /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50271A8A80BD00AC1D6A /* MenuTableViewController.m */; };
+		CD1F502F1A8A813700AC1D6A /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F502E1A8A813700AC1D6A /* RecipesViewController.m */; };
+		CD1F50331A8A871300AC1D6A /* ViewControllerConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50321A8A871300AC1D6A /* ViewControllerConfigurator.m */; };
+		CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50361A8A87B300AC1D6A /* PresentationViewController.m */; };
+		CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F503A1A8A885100AC1D6A /* AboutViewController.m */; };
 		CD8F11A21A8A788700374E4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A11A8A788700374E4E /* main.m */; };
 		CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A41A8A788700374E4E /* AppDelegate.m */; };
 		CD8F11AB1A8A788700374E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11A91A8A788700374E4E /* Main.storyboard */; };
@@ -17,6 +22,16 @@
 
 /* Begin PBXFileReference section */
 		21D8A37BBB48DA58DF32900F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CD1F50261A8A80BD00AC1D6A /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		CD1F50271A8A80BD00AC1D6A /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		CD1F502D1A8A813700AC1D6A /* RecipesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesViewController.h; sourceTree = "<group>"; };
+		CD1F502E1A8A813700AC1D6A /* RecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesViewController.m; sourceTree = "<group>"; };
+		CD1F50311A8A871300AC1D6A /* ViewControllerConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerConfigurator.h; sourceTree = "<group>"; };
+		CD1F50321A8A871300AC1D6A /* ViewControllerConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerConfigurator.m; sourceTree = "<group>"; };
+		CD1F50351A8A87B300AC1D6A /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
+		CD1F50361A8A87B300AC1D6A /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
+		CD1F50391A8A885100AC1D6A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		CD1F503A1A8A885100AC1D6A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		CD8F119C1A8A788700374E4E /* RecipesFTW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesFTW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8F11A01A8A788700374E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F11A11A8A788700374E4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,8 +84,13 @@
 		CD1F50231A8A7A0700AC1D6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD1F50301A8A86FA00AC1D6A /* Helpers */,
 				CD8F11AE1A8A788700374E4E /* LaunchScreen.xib */,
 				CD8F11A91A8A788700374E4E /* Main.storyboard */,
+				CD1F50381A8A880700AC1D6A /* About */,
+				CD1F50341A8A879700AC1D6A /* Presentation */,
+				CD1F50291A8A80F200AC1D6A /* Recipes */,
+				CD1F50251A8A80A000AC1D6A /* Menu */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -81,6 +101,51 @@
 				CD8F11AC1A8A788700374E4E /* Images.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		CD1F50251A8A80A000AC1D6A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50261A8A80BD00AC1D6A /* MenuTableViewController.h */,
+				CD1F50271A8A80BD00AC1D6A /* MenuTableViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		CD1F50291A8A80F200AC1D6A /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F502D1A8A813700AC1D6A /* RecipesViewController.h */,
+				CD1F502E1A8A813700AC1D6A /* RecipesViewController.m */,
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		CD1F50301A8A86FA00AC1D6A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50311A8A871300AC1D6A /* ViewControllerConfigurator.h */,
+				CD1F50321A8A871300AC1D6A /* ViewControllerConfigurator.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		CD1F50341A8A879700AC1D6A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50351A8A87B300AC1D6A /* PresentationViewController.h */,
+				CD1F50361A8A87B300AC1D6A /* PresentationViewController.m */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		CD1F50381A8A880700AC1D6A /* About */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50391A8A885100AC1D6A /* AboutViewController.h */,
+				CD1F503A1A8A885100AC1D6A /* AboutViewController.m */,
+			);
+			name = About;
 			sourceTree = "<group>";
 		};
 		CD8F11931A8A788700374E4E = {
@@ -235,8 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1F502F1A8A813700AC1D6A /* RecipesViewController.m in Sources */,
+				CD1F50331A8A871300AC1D6A /* ViewControllerConfigurator.m in Sources */,
+				CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */,
 				CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */,
+				CD1F50281A8A80BD00AC1D6A /* MenuTableViewController.m in Sources */,
 				CD8F11A21A8A788700374E4E /* main.m in Sources */,
+				CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
