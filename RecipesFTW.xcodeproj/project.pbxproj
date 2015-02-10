@@ -7,39 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5FDE4B05EBE54B5C057699 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F368D85F432D0CDDABA5D849 /* libPods.a */; };
 		CD8F11A21A8A788700374E4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A11A8A788700374E4E /* main.m */; };
 		CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A41A8A788700374E4E /* AppDelegate.m */; };
-		CD8F11A81A8A788700374E4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A71A8A788700374E4E /* ViewController.m */; };
 		CD8F11AB1A8A788700374E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11A91A8A788700374E4E /* Main.storyboard */; };
 		CD8F11AD1A8A788700374E4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11AC1A8A788700374E4E /* Images.xcassets */; };
 		CD8F11B01A8A788700374E4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11AE1A8A788700374E4E /* LaunchScreen.xib */; };
-		CD8F11BC1A8A788700374E4E /* RecipesFTWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11BB1A8A788700374E4E /* RecipesFTWTests.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CD8F11B61A8A788700374E4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD8F11941A8A788700374E4E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD8F119B1A8A788700374E4E;
-			remoteInfo = RecipesFTW;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		21D8A37BBB48DA58DF32900F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CD8F119C1A8A788700374E4E /* RecipesFTW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesFTW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8F11A01A8A788700374E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F11A11A8A788700374E4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD8F11A31A8A788700374E4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD8F11A41A8A788700374E4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD8F11A61A8A788700374E4E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CD8F11A71A8A788700374E4E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CD8F11AA1A8A788700374E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD8F11AC1A8A788700374E4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD8F11AF1A8A788700374E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CD8F11B51A8A788700374E4E /* RecipesFTWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesFTWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD8F11BA1A8A788700374E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD8F11BB1A8A788700374E4E /* RecipesFTWTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipesFTWTests.m; sourceTree = "<group>"; };
+		F368D85F432D0CDDABA5D849 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F67AC8EEB0ECEC042882E80D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,25 +34,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD8F11B21A8A788700374E4E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5E5FDE4B05EBE54B5C057699 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64AE7B5F4F74ED350ED499AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F67AC8EEB0ECEC042882E80D /* Pods.debug.xcconfig */,
+				21D8A37BBB48DA58DF32900F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD1F50211A8A79F500AC1D6A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F50221A8A79FF00AC1D6A /* Data */,
+				CD1F50231A8A7A0700AC1D6A /* View */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CD1F50221A8A79FF00AC1D6A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		CD1F50231A8A7A0700AC1D6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD8F11AE1A8A788700374E4E /* LaunchScreen.xib */,
+				CD8F11A91A8A788700374E4E /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CD1F50241A8A7A1600AC1D6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD8F11AC1A8A788700374E4E /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		CD8F11931A8A788700374E4E = {
 			isa = PBXGroup;
 			children = (
 				CD8F119E1A8A788700374E4E /* RecipesFTW */,
-				CD8F11B81A8A788700374E4E /* RecipesFTWTests */,
 				CD8F119D1A8A788700374E4E /* Products */,
+				64AE7B5F4F74ED350ED499AC /* Pods */,
+				F6EA84CB438230FA5FE3DC42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				CD8F119C1A8A788700374E4E /* RecipesFTW.app */,
-				CD8F11B51A8A788700374E4E /* RecipesFTWTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,13 +104,8 @@
 		CD8F119E1A8A788700374E4E /* RecipesFTW */ = {
 			isa = PBXGroup;
 			children = (
-				CD8F11A31A8A788700374E4E /* AppDelegate.h */,
-				CD8F11A41A8A788700374E4E /* AppDelegate.m */,
-				CD8F11A61A8A788700374E4E /* ViewController.h */,
-				CD8F11A71A8A788700374E4E /* ViewController.m */,
-				CD8F11A91A8A788700374E4E /* Main.storyboard */,
-				CD8F11AC1A8A788700374E4E /* Images.xcassets */,
-				CD8F11AE1A8A788700374E4E /* LaunchScreen.xib */,
+				CD1F50241A8A7A1600AC1D6A /* Resources */,
+				CD1F50211A8A79F500AC1D6A /* Classes */,
 				CD8F119F1A8A788700374E4E /* Supporting Files */,
 			);
 			path = RecipesFTW;
@@ -96,27 +114,20 @@
 		CD8F119F1A8A788700374E4E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD8F11A31A8A788700374E4E /* AppDelegate.h */,
+				CD8F11A41A8A788700374E4E /* AppDelegate.m */,
 				CD8F11A01A8A788700374E4E /* Info.plist */,
 				CD8F11A11A8A788700374E4E /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CD8F11B81A8A788700374E4E /* RecipesFTWTests */ = {
+		F6EA84CB438230FA5FE3DC42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD8F11BB1A8A788700374E4E /* RecipesFTWTests.m */,
-				CD8F11B91A8A788700374E4E /* Supporting Files */,
+				F368D85F432D0CDDABA5D849 /* libPods.a */,
 			);
-			path = RecipesFTWTests;
-			sourceTree = "<group>";
-		};
-		CD8F11B91A8A788700374E4E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD8F11BA1A8A788700374E4E /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD8F11BF1A8A788700374E4E /* Build configuration list for PBXNativeTarget "RecipesFTW" */;
 			buildPhases = (
+				41B25DE89E475759D1D77134 /* Check Pods Manifest.lock */,
 				CD8F11981A8A788700374E4E /* Sources */,
 				CD8F11991A8A788700374E4E /* Frameworks */,
 				CD8F119A1A8A788700374E4E /* Resources */,
+				672B06B00F5BBBEF43D46F4D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,24 +151,6 @@
 			productName = RecipesFTW;
 			productReference = CD8F119C1A8A788700374E4E /* RecipesFTW.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CD8F11B41A8A788700374E4E /* RecipesFTWTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CD8F11C21A8A788700374E4E /* Build configuration list for PBXNativeTarget "RecipesFTWTests" */;
-			buildPhases = (
-				CD8F11B11A8A788700374E4E /* Sources */,
-				CD8F11B21A8A788700374E4E /* Frameworks */,
-				CD8F11B31A8A788700374E4E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CD8F11B71A8A788700374E4E /* PBXTargetDependency */,
-			);
-			name = RecipesFTWTests;
-			productName = RecipesFTWTests;
-			productReference = CD8F11B51A8A788700374E4E /* RecipesFTWTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -168,10 +163,6 @@
 				TargetAttributes = {
 					CD8F119B1A8A788700374E4E = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					CD8F11B41A8A788700374E4E = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = CD8F119B1A8A788700374E4E;
 					};
 				};
 			};
@@ -189,7 +180,6 @@
 			projectRoot = "";
 			targets = (
 				CD8F119B1A8A788700374E4E /* RecipesFTW */,
-				CD8F11B41A8A788700374E4E /* RecipesFTWTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,43 +195,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD8F11B31A8A788700374E4E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41B25DE89E475759D1D77134 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		672B06B00F5BBBEF43D46F4D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD8F11981A8A788700374E4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8F11A81A8A788700374E4E /* ViewController.m in Sources */,
 				CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */,
 				CD8F11A21A8A788700374E4E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD8F11B11A8A788700374E4E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD8F11BC1A8A788700374E4E /* RecipesFTWTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CD8F11B71A8A788700374E4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CD8F119B1A8A788700374E4E /* RecipesFTW */;
-			targetProxy = CD8F11B61A8A788700374E4E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CD8F11A91A8A788700374E4E /* Main.storyboard */ = {
@@ -343,6 +342,7 @@
 		};
 		CD8F11C01A8A788700374E4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F67AC8EEB0ECEC042882E80D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RecipesFTW/Info.plist;
@@ -353,45 +353,12 @@
 		};
 		CD8F11C11A8A788700374E4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21D8A37BBB48DA58DF32900F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RecipesFTW/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		CD8F11C31A8A788700374E4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RecipesFTWTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipesFTW.app/RecipesFTW";
-			};
-			name = Debug;
-		};
-		CD8F11C41A8A788700374E4E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RecipesFTWTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipesFTW.app/RecipesFTW";
 			};
 			name = Release;
 		};
@@ -414,14 +381,7 @@
 				CD8F11C11A8A788700374E4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		CD8F11C21A8A788700374E4E /* Build configuration list for PBXNativeTarget "RecipesFTWTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CD8F11C31A8A788700374E4E /* Debug */,
-				CD8F11C41A8A788700374E4E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
