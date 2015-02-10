@@ -11,8 +11,9 @@
 
 @interface RecipeManager : NVBaseSingleton
 
-- (void)loadRecipesWithCompletition:(void(^)(void))completition
-                            failure:(void(^)(NSError* error))failure;
+- (void)loadRecipesForce:(BOOL)isForce
+            completition:(void (^)(void))completition
+                 failure:(void (^)(NSError* error))failure;
 
 @property (nonatomic, strong) NSArray* arrayRecipes;
 

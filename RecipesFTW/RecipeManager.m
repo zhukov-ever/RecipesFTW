@@ -25,9 +25,16 @@
 
 #pragma mark - public
 
-- (void)loadRecipesWithCompletition:(void(^)(void))completition
-                            failure:(void(^)(NSError* error))failure
+- (void)loadRecipesForce:(BOOL)isForce
+            completition:(void (^)(void))completition
+                 failure:(void (^)(NSError* error))failure
 {
+    if (!isForce && [self.arrayRecipes count] > 0)
+    {
+        if (completition) completition();
+        return;
+    }
+    
     [[self httpManager] GET:[kBaseUrl stringByAppendingPathComponent:kRecipes]
                  parameters:nil
                     success:^(AFHTTPRequestOperation *operation, id responseObject)
@@ -54,7 +61,11 @@
                 if (_recipe) [_array addObject:_recipe];
             }
         }
-        self.arrayRecipes = [NSArray arrayWithArray:_array];
+        self.arrayRecipes = [_array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            Recipe* _recipe1 = (Recipe*)obj1;
+            Recipe* _recipe2 = (Recipe*)obj2;
+            return [_recipe2.dateUpdate compare:_recipe1.dateUpdate];
+        }];
     }
 }
 

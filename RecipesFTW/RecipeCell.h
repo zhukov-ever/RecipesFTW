@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelDifficulty;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFavorite;
+@property (weak, nonatomic) IBOutlet UILabel *labelDateUpdate;
 
 - (IBAction)favoriteHandler:(UIButton*)sender;
 

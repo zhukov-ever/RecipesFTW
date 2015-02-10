@@ -7,19 +7,19 @@
 //
 
 #import "PresentationViewController.h"
-#import "ViewControllerConfigurator.h"
+#import "SliderConfigurator.h"
 
 @implementation PresentationViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [ViewControllerConfigurator switchOnSwipe:self];
+    [SliderConfigurator switchOnSwipe:self];
 }
 
 - (IBAction)menuHandler:(id)sender
 {
-    [ViewControllerConfigurator swipeRightFrom:self];
+    [SliderConfigurator swipeRightFrom:self];
 }
 
 

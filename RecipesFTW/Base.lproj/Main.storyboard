@@ -148,6 +148,15 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1o-A0-hi3">
+                                            <rect key="frame" x="8" y="42" width="131" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="131" id="1qJ-wp-bPp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q05-Y3-Hk1">
                                             <rect key="frame" x="282" y="4" width="30" height="30"/>
                                             <constraints>
@@ -161,10 +170,10 @@
                                                 <action selector="favoriteHandler:" destination="IIw-eh-aE9" eventType="touchUpInside" id="N2a-S9-rsy"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1o-A0-hi3">
-                                            <rect key="frame" x="8" y="53" width="131" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDateUpdate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUz-yB-CrK">
+                                            <rect key="frame" x="8" y="77" width="304" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="131" id="1qJ-wp-bPp"/>
+                                                <constraint firstAttribute="height" constant="21" id="ZaX-Vy-Lq3"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -173,17 +182,21 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Q05-Y3-Hk1" firstAttribute="trailing" secondItem="jcl-GS-xcv" secondAttribute="trailingMargin" id="0Yf-fG-RsZ"/>
+                                        <constraint firstItem="OUz-yB-CrK" firstAttribute="trailing" secondItem="jcl-GS-xcv" secondAttribute="trailingMargin" id="A3M-NS-Xle"/>
                                         <constraint firstItem="a99-A4-FHg" firstAttribute="leading" secondItem="jcl-GS-xcv" secondAttribute="leadingMargin" id="DSZ-MV-BOU"/>
+                                        <constraint firstItem="OUz-yB-CrK" firstAttribute="bottom" secondItem="jcl-GS-xcv" secondAttribute="bottomMargin" id="Q1B-vp-QoK"/>
                                         <constraint firstItem="Q05-Y3-Hk1" firstAttribute="top" secondItem="jcl-GS-xcv" secondAttribute="topMargin" constant="-4" id="UoT-xb-EUJ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="E1o-A0-hi3" secondAttribute="bottom" constant="24" id="Vx0-N8-zWa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="E1o-A0-hi3" secondAttribute="bottom" constant="35" id="Vx0-N8-zWa"/>
+                                        <constraint firstItem="OUz-yB-CrK" firstAttribute="leading" secondItem="jcl-GS-xcv" secondAttribute="leadingMargin" id="WQH-O6-BBR"/>
                                         <constraint firstItem="a99-A4-FHg" firstAttribute="top" secondItem="jcl-GS-xcv" secondAttribute="topMargin" id="a6C-uF-jAK"/>
                                         <constraint firstItem="E1o-A0-hi3" firstAttribute="leading" secondItem="jcl-GS-xcv" secondAttribute="leadingMargin" id="bMt-5H-HBr"/>
                                         <constraint firstItem="Q05-Y3-Hk1" firstAttribute="leading" secondItem="a99-A4-FHg" secondAttribute="trailing" constant="8" id="dQq-lP-1Sy"/>
-                                        <constraint firstItem="E1o-A0-hi3" firstAttribute="top" secondItem="a99-A4-FHg" secondAttribute="bottom" constant="24" id="wuQ-il-1bu"/>
+                                        <constraint firstItem="E1o-A0-hi3" firstAttribute="top" secondItem="a99-A4-FHg" secondAttribute="bottom" constant="13" id="wuQ-il-1bu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="buttonFavorite" destination="Q05-Y3-Hk1" id="N0v-Vc-uSB"/>
+                                    <outlet property="labelDateUpdate" destination="OUz-yB-CrK" id="zMh-VD-8SU"/>
                                     <outlet property="labelDifficulty" destination="E1o-A0-hi3" id="cqH-PP-rCy"/>
                                     <outlet property="labelName" destination="a99-A4-FHg" id="BtE-9b-3VH"/>
                                 </connections>

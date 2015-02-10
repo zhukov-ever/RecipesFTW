@@ -21,7 +21,7 @@
 
 - (void)setRecipe:(Recipe *)recipe
 {
-    if (recipe && recipe.theId != m_recipe.theId)
+    if (recipe)
     {
         m_recipe = recipe;
         [self fillUI];
@@ -41,6 +41,7 @@
         self.labelDifficulty.hidden = YES;
     }
     self.buttonFavorite.selected = self.recipe.isFavorite;
+    self.labelDateUpdate.text = [self.recipe.dateUpdate description];
 }
 
 - (IBAction)favoriteHandler:(UIButton*)sender

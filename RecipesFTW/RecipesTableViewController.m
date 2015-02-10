@@ -7,7 +7,7 @@
 //
 
 #import "RecipesTableViewController.h"
-#import "ViewControllerConfigurator.h"
+#import "SliderConfigurator.h"
 
 #import "RecipeCell.h"
 #import "RecipeManager.h"
@@ -21,13 +21,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [ViewControllerConfigurator switchOnSwipe:self];
+    [SliderConfigurator switchOnSwipe:self];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [[RecipeManager shared] loadRecipesWithCompletition:^{
-        [self reloadData];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshHandler:) forControlEvents:UIControlEventValueChanged];
+    
+    [[RecipeManager shared] loadRecipesForce:NO completition:^{
+       [self reloadData];
     } failure:^(NSError *error) {
         
     }];
@@ -35,12 +38,22 @@
 
 - (IBAction)menuHandler:(id)sender
 {
-    [ViewControllerConfigurator swipeRightFrom:self];
+    [SliderConfigurator swipeRightFrom:self];
 }
 
 
 
 #pragma mark - private
+
+- (void) refreshHandler:(UIRefreshControl*)sender
+{
+    [[RecipeManager shared] loadRecipesForce:YES completition:^{
+        [self.refreshControl endRefreshing];
+        [self reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
+}
 
 - (void) reloadData
 {
