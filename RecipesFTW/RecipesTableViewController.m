@@ -13,7 +13,7 @@
 #import "RecipeManager.h"
 #import "RecipesRouter.h"
 
-#import "UIImageView+AFNetworking.h"
+#import "PresentationRouter.h"
 
 @interface RecipesTableViewController()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -41,6 +41,9 @@
     } failure:^(NSError *error) {
         
     }];
+    
+    
+    [[PresentationRouter new] gotoMeFrom:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

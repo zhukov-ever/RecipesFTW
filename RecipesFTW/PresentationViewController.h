@@ -10,6 +10,10 @@
 
 @interface PresentationViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
 - (IBAction)menuHandler:(id)sender;
+- (IBAction)skipHandler:(id)sender;
 
 @end
