@@ -8,6 +8,11 @@
 
 #import "RecipeCell.h"
 #import "Recipe.h"
+#import "RecipeManager.h"
+
+@interface RecipeCell()
+
+@end
 
 @implementation RecipeCell
 @synthesize recipe = m_recipe;
@@ -42,14 +47,18 @@
     }
     self.buttonFavorite.selected = self.recipe.isFavorite;
     self.labelDateUpdate.text = [self.recipe.dateUpdate description];
+    
+    self.imageViewRecipe.image = nil;
 }
+
+
+#pragma mark - handlers
 
 - (IBAction)favoriteHandler:(UIButton*)sender
 {
-    if (self.recipe)
-    {
-        sender.selected = !sender.selected;
-        self.recipe.favorite = sender.selected;
-    }
+    sender.selected = !sender.selected;
+    [[RecipeManager shared] recipe:self.recipe setFavorite:sender.selected];
 }
+
+
 @end

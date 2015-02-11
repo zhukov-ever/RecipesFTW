@@ -7,6 +7,7 @@
 //
 
 #import "MenuTableViewController.h"
+#import "MenuRouter.h"
 
 @implementation MenuTableViewController
 
@@ -14,6 +15,11 @@
 {
     [super viewDidLoad];
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [[MenuRouter new] prepareForSegue:segue sender:sender];
 }
 
 

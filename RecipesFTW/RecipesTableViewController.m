@@ -13,6 +13,9 @@
 #import "RecipeManager.h"
 
 @interface RecipesTableViewController()<UITableViewDataSource, UITableViewDelegate>
+{
+    NSArray* m_arrayRecipes;
+}
 
 @end
 
@@ -57,6 +60,15 @@
 
 - (void) reloadData
 {
+    switch (self.state)
+    {
+        case RecipesViewControllerStateNormal:
+            m_arrayRecipes = [RecipeManager shared].arrayRecipes;
+            break;
+        case RecipesViewControllerStateFavorite:
+            m_arrayRecipes = [RecipeManager shared].arrayFavoriteRecipes;
+            break;
+    }
     [self.tableView reloadData];
 }
 
@@ -64,21 +76,32 @@
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 1;
+    if ([cell isKindOfClass:[RecipeCell class]])
+    {
+        ((RecipeCell*)cell).visible = YES;
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell isKindOfClass:[RecipeCell class]])
+    {
+        ((RecipeCell*)cell).visible = NO;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[RecipeManager shared].arrayRecipes count];
+    return [m_arrayRecipes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RecipeCell* _cell = [tableView dequeueReusableCellWithIdentifier:@"RecipeCell"];
     
-    Recipe* _recipe = [[RecipeManager shared].arrayRecipes objectAtIndex:indexPath.row];
+    Recipe* _recipe = [m_arrayRecipes objectAtIndex:indexPath.row];
     _cell.recipe = _recipe;
     
     return _cell;

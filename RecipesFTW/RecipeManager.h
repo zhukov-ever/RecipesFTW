@@ -15,6 +15,9 @@
             completition:(void (^)(void))completition
                  failure:(void (^)(NSError* error))failure;
 
-@property (nonatomic, strong) NSArray* arrayRecipes;
+@property (atomic, strong) NSArray* arrayRecipes;
+@property (atomic, strong) NSArray* arrayFavoriteRecipes;
+
+- (void) recipe:(Recipe*)recipe setFavorite:(BOOL)isFavorite;
 
 @end

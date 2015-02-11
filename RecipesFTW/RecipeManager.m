@@ -39,14 +39,35 @@
                  parameters:nil
                     success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         [self parseRecipesFromResponse:responseObject];
-         if (completition) completition();
+         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+             [self parseRecipesFromResponse:responseObject];
+             if (completition)
+             {
+                 dispatch_sync(dispatch_get_main_queue(), ^{
+                     completition();
+                 });
+             }
+         });
+
      }
                     failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          if (failure) failure(error);
      }];
 }
+
+- (void) recipe:(Recipe*)recipe setFavorite:(BOOL)isFavorite;
+{
+    if (recipe)
+    {
+        recipe.favorite = isFavorite;
+        [self makeFavoriteArray];
+    }
+}
+
+
+
+#pragma mark - private
 
 - (void) parseRecipesFromResponse:(id)responseObject
 {
@@ -66,12 +87,16 @@
             Recipe* _recipe2 = (Recipe*)obj2;
             return [_recipe2.dateUpdate compare:_recipe1.dateUpdate];
         }];
+        
+        [self makeFavoriteArray];
     }
 }
 
-
-
-#pragma mark - private
+- (void) makeFavoriteArray
+{
+    NSPredicate* _predicate = [NSPredicate predicateWithFormat:@"isFavorite = YES"];
+    self.arrayFavoriteRecipes = [self.arrayRecipes filteredArrayUsingPredicate:_predicate];
+}
 
 - (AFHTTPRequestOperationManager*) httpManager
 {

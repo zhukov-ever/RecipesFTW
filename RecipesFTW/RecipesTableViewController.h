@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, RecipesViewControllerStates)
+{
+    RecipesViewControllerStateNormal,
+    RecipesViewControllerStateFavorite
+};
+
 @interface RecipesTableViewController : UITableViewController
+
+@property (nonatomic) RecipesViewControllerStates state;
 
 - (IBAction)menuHandler:(id)sender;
 

@@ -24,6 +24,7 @@
 		CD8F11AB1A8A788700374E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11A91A8A788700374E4E /* Main.storyboard */; };
 		CD8F11AD1A8A788700374E4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11AC1A8A788700374E4E /* Images.xcassets */; };
 		CD8F11B01A8A788700374E4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11AE1A8A788700374E4E /* LaunchScreen.xib */; };
+		CDFB3F6B1A8BE221001EC16C /* MenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFB3F6A1A8BE221001EC16C /* MenuRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,9 @@
 		CD8F11AA1A8A788700374E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD8F11AC1A8A788700374E4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD8F11AF1A8A788700374E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CDFB3F621A8BD79D001EC16C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CDFB3F691A8BE221001EC16C /* MenuRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuRouter.h; sourceTree = "<group>"; };
+		CDFB3F6A1A8BE221001EC16C /* MenuRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuRouter.m; sourceTree = "<group>"; };
 		F368D85F432D0CDDABA5D849 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67AC8EEB0ECEC042882E80D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +130,8 @@
 		CD1F50251A8A80A000AC1D6A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				CDFB3F691A8BE221001EC16C /* MenuRouter.h */,
+				CDFB3F6A1A8BE221001EC16C /* MenuRouter.m */,
 				CD1F50261A8A80BD00AC1D6A /* MenuTableViewController.h */,
 				CD1F50271A8A80BD00AC1D6A /* MenuTableViewController.m */,
 			);
@@ -260,6 +266,7 @@
 		F6EA84CB438230FA5FE3DC42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDFB3F621A8BD79D001EC16C /* Security.framework */,
 				F368D85F432D0CDDABA5D849 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -383,6 +390,7 @@
 				CD8F11A21A8A788700374E4E /* main.m in Sources */,
 				CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */,
 				CD1F504C1A8A926900AC1D6A /* RecipeManager.m in Sources */,
+				CDFB3F6B1A8BE221001EC16C /* MenuRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
