@@ -48,8 +48,9 @@
     }
     self.buttonFavorite.selected = self.recipe.isFavorite;
     self.labelDateUpdate.text = [self.recipe.dateUpdate description];
-    
+
     [self.imageViewRecipe sd_setImageWithURL:[NSURL URLWithString:self.recipe.imageUrlString]];
+
 }
 
 

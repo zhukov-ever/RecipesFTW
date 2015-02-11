@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SDImageCache.h"
 
 @interface AppDelegate ()
 
@@ -43,6 +44,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    [[SDImageCache sharedImageCache] clearMemory];
+    [[SDImageCache sharedImageCache] cleanDisk];
+    [[SDImageCache sharedImageCache] clearDisk];
 }
 
 @end

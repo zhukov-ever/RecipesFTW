@@ -11,6 +11,7 @@
 
 #import "RecipeCell.h"
 #import "RecipeManager.h"
+#import "RecipesRouter.h"
 
 #import "UIImageView+AFNetworking.h"
 
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     [SliderConfigurator switchOnSwipe:self];
     
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -40,6 +42,17 @@
         
     }];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    RecipesRouter* _router = [RecipesRouter new];
+    RecipeCell* _cell = (RecipeCell*)[self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
+    _router.recipe = _cell.recipe;
+    [_router prepareForSegue:segue sender:sender];
+}
+
+
+#pragma mark - handlers
 
 - (IBAction)menuHandler:(id)sender
 {

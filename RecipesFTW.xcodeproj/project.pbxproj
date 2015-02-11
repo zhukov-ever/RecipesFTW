@@ -25,6 +25,8 @@
 		CD8F11AD1A8A788700374E4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11AC1A8A788700374E4E /* Images.xcassets */; };
 		CD8F11B01A8A788700374E4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11AE1A8A788700374E4E /* LaunchScreen.xib */; };
 		CDFB3F6B1A8BE221001EC16C /* MenuRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFB3F6A1A8BE221001EC16C /* MenuRouter.m */; };
+		CDFB3F6F1A8BF327001EC16C /* RecipesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFB3F6E1A8BF327001EC16C /* RecipesDetailViewController.m */; };
+		CDFB3F721A8BF3BB001EC16C /* RecipesRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFB3F711A8BF3BB001EC16C /* RecipesRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,10 @@
 		CDFB3F621A8BD79D001EC16C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CDFB3F691A8BE221001EC16C /* MenuRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuRouter.h; sourceTree = "<group>"; };
 		CDFB3F6A1A8BE221001EC16C /* MenuRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuRouter.m; sourceTree = "<group>"; };
+		CDFB3F6D1A8BF327001EC16C /* RecipesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesDetailViewController.h; sourceTree = "<group>"; };
+		CDFB3F6E1A8BF327001EC16C /* RecipesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesDetailViewController.m; sourceTree = "<group>"; };
+		CDFB3F701A8BF3BB001EC16C /* RecipesRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesRouter.h; sourceTree = "<group>"; };
+		CDFB3F711A8BF3BB001EC16C /* RecipesRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesRouter.m; sourceTree = "<group>"; };
 		F368D85F432D0CDDABA5D849 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67AC8EEB0ECEC042882E80D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +121,7 @@
 				CD1F50381A8A880700AC1D6A /* About */,
 				CD1F50341A8A879700AC1D6A /* Presentation */,
 				CD1F50291A8A80F200AC1D6A /* Recipes */,
+				CDFB3F6C1A8BF308001EC16C /* RecipesDetail */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -141,6 +148,8 @@
 		CD1F50291A8A80F200AC1D6A /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				CDFB3F701A8BF3BB001EC16C /* RecipesRouter.h */,
+				CDFB3F711A8BF3BB001EC16C /* RecipesRouter.m */,
 				CD1F504D1A8A9B8800AC1D6A /* RecipeCell.h */,
 				CD1F504E1A8A9B8800AC1D6A /* RecipeCell.m */,
 				CD1F502D1A8A813700AC1D6A /* RecipesTableViewController.h */,
@@ -263,6 +272,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CDFB3F6C1A8BF308001EC16C /* RecipesDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CDFB3F6D1A8BF327001EC16C /* RecipesDetailViewController.h */,
+				CDFB3F6E1A8BF327001EC16C /* RecipesDetailViewController.m */,
+			);
+			name = RecipesDetail;
+			sourceTree = "<group>";
+		};
 		F6EA84CB438230FA5FE3DC42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,9 +397,11 @@
 			files = (
 				CD1F502F1A8A813700AC1D6A /* RecipesTableViewController.m in Sources */,
 				CD1F50331A8A871300AC1D6A /* SliderConfigurator.m in Sources */,
+				CDFB3F6F1A8BF327001EC16C /* RecipesDetailViewController.m in Sources */,
 				CD1F50531A8A9EEA00AC1D6A /* ObjectParser.m in Sources */,
 				CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */,
 				CD1F504F1A8A9B8800AC1D6A /* RecipeCell.m in Sources */,
+				CDFB3F721A8BF3BB001EC16C /* RecipesRouter.m in Sources */,
 				CD1F503F1A8A914900AC1D6A /* Recipe.m in Sources */,
 				CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */,
 				CD1F50481A8A918200AC1D6A /* NVBaseSingleton.m in Sources */,
