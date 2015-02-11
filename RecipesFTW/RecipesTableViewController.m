@@ -12,6 +12,8 @@
 #import "RecipeCell.h"
 #import "RecipeManager.h"
 
+#import "UIImageView+AFNetworking.h"
+
 @interface RecipesTableViewController()<UITableViewDataSource, UITableViewDelegate>
 {
     NSArray* m_arrayRecipes;
@@ -76,22 +78,6 @@
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([cell isKindOfClass:[RecipeCell class]])
-    {
-        ((RecipeCell*)cell).visible = YES;
-    }
-}
-
--(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([cell isKindOfClass:[RecipeCell class]])
-    {
-        ((RecipeCell*)cell).visible = NO;
-    }
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [m_arrayRecipes count];
@@ -103,6 +89,8 @@
     
     Recipe* _recipe = [m_arrayRecipes objectAtIndex:indexPath.row];
     _cell.recipe = _recipe;
+    _cell.indexPath = [indexPath copy];
+    
     
     return _cell;
 }

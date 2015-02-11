@@ -13,6 +13,7 @@
 @interface RecipeCell : UITableViewCell
 
 @property (nonatomic, strong) Recipe* recipe;
+@property (nonatomic, strong) NSIndexPath* indexPath;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewRecipe;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;

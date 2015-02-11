@@ -9,6 +9,7 @@
 #import "RecipeCell.h"
 #import "Recipe.h"
 #import "RecipeManager.h"
+#import "UIImageView+WebCache.h"
 
 @interface RecipeCell()
 
@@ -48,7 +49,7 @@
     self.buttonFavorite.selected = self.recipe.isFavorite;
     self.labelDateUpdate.text = [self.recipe.dateUpdate description];
     
-    self.imageViewRecipe.image = nil;
+    [self.imageViewRecipe sd_setImageWithURL:[NSURL URLWithString:self.recipe.imageUrlString]];
 }
 
 
