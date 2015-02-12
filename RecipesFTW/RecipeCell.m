@@ -42,6 +42,7 @@
     [[[ThemeManager shared] theme] labelSecondary:self.labelDifficulty];
     [[[ThemeManager shared] theme] labelSecondary:self.labelDateUpdate];
     [[[ThemeManager shared] theme] imageView:self.imageViewRecipe];
+    [[[ThemeManager shared] theme] ratingVeiw:m_starControl];
 }
 
 - (void)setRecipe:(Recipe*)recipe

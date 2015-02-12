@@ -50,6 +50,7 @@
     [[[ThemeManager shared] theme] labelSecondary:self.labelDateUpdate];
     [[[ThemeManager shared] theme] textView:self.textViewInstructions];
     [[[ThemeManager shared] theme] textView:self.textViewDescription];
+    [[[ThemeManager shared] theme] ratingVeiw:m_starControl];
 }
 
 - (void)viewDidLayoutSubviews

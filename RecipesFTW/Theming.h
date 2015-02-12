@@ -16,6 +16,7 @@
 @class UILabel;
 @class UIImageView;
 @class UITextView;
+@class AXRatingView;
 
 @protocol Theming <NSObject>
 
@@ -29,5 +30,6 @@
 - (void) buttonFavorite:(UIButton*)button;
 - (void) imageView:(UIImageView*)imageView;
 - (void) textView:(UITextView*)textView;
+- (void) ratingVeiw:(AXRatingView*)ratingVeiw;
 
 @end

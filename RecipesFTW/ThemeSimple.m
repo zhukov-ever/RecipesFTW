@@ -9,6 +9,7 @@
 #import "ThemeSimple.h"
 #import <UIKit/UIKit.h>
 #import "UIColor+NVProps.h"
+#import <AXRatingView/AXRatingView.h>
 
 #define kFontNormal @"HelveticaNeue"
 #define kFontBoldItalic @"HelveticaNeue-BoldItalic"
@@ -102,5 +103,11 @@
     textView.textColor = [UIColor colorWithHexString:@"744253"];
     textView.font = [UIFont fontWithName:kFontItalic size:14];
 }
+- (void) ratingVeiw:(AXRatingView*)ratingVeiw
+{
+    ratingVeiw.highlightColor = [UIColor colorWithHexString:@"744253"];
+    ratingVeiw.baseColor = [UIColor colorWithHexString:@"D7BEA8"];
+}
+
 
 @end
