@@ -13,7 +13,6 @@
 		CD1F50331A8A871300AC1D6A /* SliderConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50321A8A871300AC1D6A /* SliderConfigurator.m */; };
 		CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50361A8A87B300AC1D6A /* PresentationViewController.m */; };
 		CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F503A1A8A885100AC1D6A /* AboutViewController.m */; };
-		CD1F503F1A8A914900AC1D6A /* RecipeOld.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F503E1A8A914900AC1D6A /* RecipeOld.m */; };
 		CD1F50481A8A918200AC1D6A /* NVBaseSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50441A8A918200AC1D6A /* NVBaseSingleton.m */; };
 		CD1F50491A8A918200AC1D6A /* UIColor+NVProps.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50471A8A918200AC1D6A /* UIColor+NVProps.m */; };
 		CD1F504C1A8A926900AC1D6A /* RecipeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F504B1A8A926900AC1D6A /* RecipeManager.m */; };
@@ -22,6 +21,10 @@
 		CD50268C1A8C0D05009BA7DC /* PresentationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50268B1A8C0D05009BA7DC /* PresentationRouter.m */; };
 		CD50268E1A8D24D8009BA7DC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD50268D1A8D24D8009BA7DC /* CoreData.framework */; };
 		CD5026911A8D2556009BA7DC /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD50268F1A8D2556009BA7DC /* Main.xcdatamodeld */; };
+		CD5026971A8D2D29009BA7DC /* _Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5026941A8D2D29009BA7DC /* _Recipe.m */; };
+		CD5026981A8D2D29009BA7DC /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5026961A8D2D29009BA7DC /* Recipe.m */; };
+		CD50269B1A8D3052009BA7DC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50269A1A8D3052009BA7DC /* CoreDataManager.m */; };
+		CD50269E1A8D3789009BA7DC /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50269D1A8D3789009BA7DC /* AlertManager.m */; };
 		CD8F11A21A8A788700374E4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A11A8A788700374E4E /* main.m */; };
 		CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A41A8A788700374E4E /* AppDelegate.m */; };
 		CD8F11AB1A8A788700374E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11A91A8A788700374E4E /* Main.storyboard */; };
@@ -44,8 +47,6 @@
 		CD1F50361A8A87B300AC1D6A /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
 		CD1F50391A8A885100AC1D6A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		CD1F503A1A8A885100AC1D6A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		CD1F503D1A8A914900AC1D6A /* RecipeOld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeOld.h; sourceTree = "<group>"; };
-		CD1F503E1A8A914900AC1D6A /* RecipeOld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeOld.m; sourceTree = "<group>"; };
 		CD1F50431A8A918200AC1D6A /* NVBaseSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVBaseSingleton.h; sourceTree = "<group>"; };
 		CD1F50441A8A918200AC1D6A /* NVBaseSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVBaseSingleton.m; sourceTree = "<group>"; };
 		CD1F50461A8A918200AC1D6A /* UIColor+NVProps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NVProps.h"; sourceTree = "<group>"; };
@@ -60,6 +61,14 @@
 		CD50268B1A8C0D05009BA7DC /* PresentationRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationRouter.m; sourceTree = "<group>"; };
 		CD50268D1A8D24D8009BA7DC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CD5026901A8D2556009BA7DC /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		CD5026931A8D2D29009BA7DC /* _Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Recipe.h; sourceTree = "<group>"; };
+		CD5026941A8D2D29009BA7DC /* _Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Recipe.m; sourceTree = "<group>"; };
+		CD5026951A8D2D29009BA7DC /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		CD5026961A8D2D29009BA7DC /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		CD5026991A8D3052009BA7DC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		CD50269A1A8D3052009BA7DC /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		CD50269C1A8D3789009BA7DC /* AlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
+		CD50269D1A8D3789009BA7DC /* AlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
 		CD8F119C1A8A788700374E4E /* RecipesFTW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesFTW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8F11A01A8A788700374E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F11A11A8A788700374E4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1F50501A8A9EC700AC1D6A /* Helpers */,
+				CD5026921A8D2D29009BA7DC /* Models */,
 				CD50268F1A8D2556009BA7DC /* Main.xcdatamodeld */,
 				CD1F503C1A8A913100AC1D6A /* Recipes */,
 			);
@@ -172,6 +182,8 @@
 			children = (
 				CD1F50311A8A871300AC1D6A /* SliderConfigurator.h */,
 				CD1F50321A8A871300AC1D6A /* SliderConfigurator.m */,
+				CD50269C1A8D3789009BA7DC /* AlertManager.h */,
+				CD50269D1A8D3789009BA7DC /* AlertManager.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -199,8 +211,6 @@
 		CD1F503C1A8A913100AC1D6A /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				CD1F503D1A8A914900AC1D6A /* RecipeOld.h */,
-				CD1F503E1A8A914900AC1D6A /* RecipeOld.m */,
 				CD1F504A1A8A926900AC1D6A /* RecipeManager.h */,
 				CD1F504B1A8A926900AC1D6A /* RecipeManager.m */,
 			);
@@ -239,8 +249,21 @@
 			children = (
 				CD1F50511A8A9EEA00AC1D6A /* ObjectParser.h */,
 				CD1F50521A8A9EEA00AC1D6A /* ObjectParser.m */,
+				CD5026991A8D3052009BA7DC /* CoreDataManager.h */,
+				CD50269A1A8D3052009BA7DC /* CoreDataManager.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		CD5026921A8D2D29009BA7DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD5026931A8D2D29009BA7DC /* _Recipe.h */,
+				CD5026941A8D2D29009BA7DC /* _Recipe.m */,
+				CD5026951A8D2D29009BA7DC /* Recipe.h */,
+				CD5026961A8D2D29009BA7DC /* Recipe.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CD8F11931A8A788700374E4E = {
@@ -409,22 +432,25 @@
 			files = (
 				CD5026911A8D2556009BA7DC /* Main.xcdatamodeld in Sources */,
 				CD1F502F1A8A813700AC1D6A /* RecipesTableViewController.m in Sources */,
+				CD50269B1A8D3052009BA7DC /* CoreDataManager.m in Sources */,
 				CD1F50331A8A871300AC1D6A /* SliderConfigurator.m in Sources */,
 				CDFB3F6F1A8BF327001EC16C /* RecipesDetailViewController.m in Sources */,
 				CD1F50531A8A9EEA00AC1D6A /* ObjectParser.m in Sources */,
 				CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */,
 				CD1F504F1A8A9B8800AC1D6A /* RecipeCell.m in Sources */,
 				CDFB3F721A8BF3BB001EC16C /* RecipesRouter.m in Sources */,
-				CD1F503F1A8A914900AC1D6A /* RecipeOld.m in Sources */,
 				CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */,
 				CD1F50481A8A918200AC1D6A /* NVBaseSingleton.m in Sources */,
+				CD5026981A8D2D29009BA7DC /* Recipe.m in Sources */,
 				CD1F50491A8A918200AC1D6A /* UIColor+NVProps.m in Sources */,
 				CD1F50281A8A80BD00AC1D6A /* MenuTableViewController.m in Sources */,
 				CD8F11A21A8A788700374E4E /* main.m in Sources */,
+				CD50269E1A8D3789009BA7DC /* AlertManager.m in Sources */,
 				CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */,
 				CD1F504C1A8A926900AC1D6A /* RecipeManager.m in Sources */,
 				CDFB3F6B1A8BE221001EC16C /* MenuRouter.m in Sources */,
 				CD50268C1A8C0D05009BA7DC /* PresentationRouter.m in Sources */,
+				CD5026971A8D2D29009BA7DC /* _Recipe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

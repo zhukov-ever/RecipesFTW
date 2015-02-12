@@ -21,7 +21,7 @@
         UINavigationController* _nc = [[UINavigationController alloc] initWithRootViewController:_vc];
         _nc.navigationBar.translucent = NO;
         
-        [vc.navigationController presentViewController:_nc animated:NO completion:nil];
+        [vc.navigationController presentViewController:_nc animated:YES completion:nil];
     });
 
 }

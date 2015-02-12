@@ -7,7 +7,7 @@
 //
 
 #import "RecipeCell.h"
-#import "RecipeOld.h"
+#import "Recipe.h"
 #import "RecipeManager.h"
 #import "UIImageView+WebCache.h"
 
@@ -21,11 +21,9 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    m_recipe.realId = NSNotFound;
 }
 
-- (void)setRecipe:(RecipeOld *)recipe
+- (void)setRecipe:(Recipe*)recipe
 {
     if (recipe)
     {
@@ -46,7 +44,7 @@
     {
         self.labelDifficulty.hidden = YES;
     }
-    self.buttonFavorite.selected = self.recipe.isFavorite;
+    self.buttonFavorite.selected = [self.recipe.favorite boolValue];
     self.labelDateUpdate.text = [self.recipe.dateUpdate description];
 
     [self.imageViewRecipe sd_setImageWithURL:[NSURL URLWithString:self.recipe.imageUrlString]];
@@ -59,7 +57,14 @@
 - (IBAction)favoriteHandler:(UIButton*)sender
 {
     sender.selected = !sender.selected;
-    [[RecipeManager shared] recipe:self.recipe setFavorite:sender.selected];
+    [[RecipeManager shared] recipe:self.recipe
+                       setFavorite:sender.selected
+                      completition:^
+     {
+         
+     } failure:^(NSError *error) {
+         sender.selected = [self.recipe.favorite boolValue];
+     }];
 }
 
 

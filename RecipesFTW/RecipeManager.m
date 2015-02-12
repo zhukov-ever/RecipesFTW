@@ -8,13 +8,14 @@
 
 #import "RecipeManager.h"
 #import <AFNetworking/AFNetworking.h>
-#import <CoreData/CoreData.h>
+#import "CoreDataManager.h"
 
 #define kBaseUrl @"http://hyper-recipes.herokuapp.com"
 #define kRecipes @"recipes"
 
 
 @implementation RecipeManager
+@synthesize arrayRecipes = m_arrayRecipes;
 
 + (instancetype)shared
 {
@@ -29,8 +30,13 @@
             completition:(void (^)(void))completition
                  failure:(void (^)(NSError* error))failure
 {
+    [self fetchRecipes];
+    
     if (!isForce && [self.arrayRecipes count] > 0)
     {
+        [self makeFavoriteArray];
+        [self sortRecipesByDate];
+        
         if (completition) completition();
         return;
     }
@@ -56,12 +62,32 @@
      }];
 }
 
-- (void) recipe:(RecipeOld*)recipe setFavorite:(BOOL)isFavorite;
+- (void) recipe:(Recipe*)recipe
+    setFavorite:(BOOL)isFavorite
+   completition:(void (^)(void))completition
+        failure:(void (^)(NSError* error))failure
 {
     if (recipe)
     {
-        recipe.favorite = isFavorite;
-        [self makeFavoriteArray];
+        NSString* _urlString = [kBaseUrl stringByAppendingFormat:@"/%@/%@", kRecipes, recipe.realId];
+        NSDictionary* _dict = @{
+                                @"recipe":@{
+                                        @"favorite":@(isFavorite)
+                                        }
+                                };
+        
+        [[self httpManager] PUT:_urlString parameters:_dict success:^(AFHTTPRequestOperation *operation, id responseObject)
+        {
+            recipe.favorite = [NSNumber numberWithBool:isFavorite];
+            
+            NSError* _error;
+            [[[CoreDataManager shared] managedObjectContext] save:&_error];
+            
+            [self makeFavoriteArray];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            failure(error);
+        }];
+
     }
 }
 
@@ -69,33 +95,59 @@
 
 #pragma mark - private
 
+- (void) fetchRecipes
+{
+    NSError* _error;
+    NSFetchRequest* _fetchRecipes = [NSFetchRequest new];
+    [_fetchRecipes setEntity:[NSEntityDescription entityForName:[Recipe description] inManagedObjectContext:[[CoreDataManager shared] managedObjectContext]]];
+    NSArray* _arrayRecipes = [[[CoreDataManager shared] managedObjectContext] executeFetchRequest:_fetchRecipes error:&_error];
+    m_arrayRecipes = _arrayRecipes;
+}
+
+- (void) sortRecipesByDate
+{
+    NSComparator _comparator = ^NSComparisonResult(id obj1, id obj2) {
+        Recipe* _recipe1 = (Recipe*)obj1;
+        Recipe* _recipe2 = (Recipe*)obj2;
+        return [_recipe2.dateUpdate compare:_recipe1.dateUpdate];
+    };
+    
+    self.arrayRecipes = [self.arrayRecipes sortedArrayUsingComparator:_comparator];
+    self.arrayFavoriteRecipes = [self.arrayFavoriteRecipes sortedArrayUsingComparator:_comparator];
+}
+
+- (void) makeFavoriteArray
+{
+    NSPredicate* _predicate = [NSPredicate predicateWithFormat:@"favorite = YES"];
+    self.arrayFavoriteRecipes = [self.arrayRecipes filteredArrayUsingPredicate:_predicate];
+}
+
 - (void) parseRecipesFromResponse:(id)responseObject
 {
     if (responseObject && [responseObject conformsToProtocol:@protocol(NSFastEnumeration)])
     {
+        [self fetchRecipes];
+        for (Recipe* _recipe in self.arrayRecipes)
+        {
+            [[[CoreDataManager shared] managedObjectContext] deleteObject:_recipe];
+        }
+        
         NSMutableArray* _array = [NSMutableArray new];
         for (id _dictRecipe in responseObject)
         {
             if ([_dictRecipe isKindOfClass:[NSDictionary class]])
             {
-                RecipeOld* _recipe = [RecipeOld objectFromDictionary:_dictRecipe];
+                Recipe* _recipe = [Recipe objectFromDictionary:_dictRecipe];
                 if (_recipe) [_array addObject:_recipe];
             }
         }
-        self.arrayRecipes = [_array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            RecipeOld* _recipe1 = (RecipeOld*)obj1;
-            RecipeOld* _recipe2 = (RecipeOld*)obj2;
-            return [_recipe2.dateUpdate compare:_recipe1.dateUpdate];
-        }];
+        NSError* _error;
+        [[[CoreDataManager shared] managedObjectContext] save:&_error];
+        self.arrayRecipes = [NSArray arrayWithArray:_array];
         
         [self makeFavoriteArray];
+        [self sortRecipesByDate];
     }
-}
-
-- (void) makeFavoriteArray
-{
-    NSPredicate* _predicate = [NSPredicate predicateWithFormat:@"isFavorite = YES"];
-    self.arrayFavoriteRecipes = [self.arrayRecipes filteredArrayUsingPredicate:_predicate];
 }
 
 - (AFHTTPRequestOperationManager*) httpManager

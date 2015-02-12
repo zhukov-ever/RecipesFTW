@@ -20,12 +20,11 @@
         if ([[segue identifier] isEqualToString:@"ShowFavoriteView"])
         {
             ((RecipesTableViewController*)_vc).state = RecipesViewControllerStateFavorite;
-            _vc.title = @"Recipes";
+            _vc.title = @"Favorites";
         }
         else if ([[segue identifier] isEqualToString:@"ShowRecipeView"])
         {
             ((RecipesTableViewController*)_vc).state = RecipesViewControllerStateNormal;
-            _vc.title = @"Favorites";
         }
         else if ([[segue identifier] isEqualToString:@"ShowPresentationView"])
         {

@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="119" y="37"/>
         </scene>
-        <!--Recipes Table View Controller-->
+        <!--Recipes-->
         <scene sceneID="Q6s-iN-nwG">
             <objects>
                 <tableViewController id="CBy-jh-lK2" customClass="RecipesTableViewController" sceneMemberID="viewController">
@@ -240,7 +240,7 @@
                             <outlet property="delegate" destination="CBy-jh-lK2" id="7Y3-c4-gzn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zJs-8e-JiX">
+                    <navigationItem key="navigationItem" title="Recipes" id="zJs-8e-JiX">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="wKV-UE-dk6">
                             <connections>
                                 <action selector="menuHandler:" destination="CBy-jh-lK2" id="8rl-Xj-KbK"/>

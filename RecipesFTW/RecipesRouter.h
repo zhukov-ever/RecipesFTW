@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class RecipeOld;
+@class Recipe;
 
 @interface RecipesRouter : NSObject
 
-@property (nonatomic, strong) RecipeOld* recipe;
+@property (nonatomic, strong) Recipe* recipe;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 @end

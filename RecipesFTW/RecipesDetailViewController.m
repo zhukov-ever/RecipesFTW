@@ -7,7 +7,7 @@
 //
 
 #import "RecipesDetailViewController.h"
-#import "RecipeOld.h"
+#import "Recipe.h"
 #import "UIImageView+WebCache.h"
 
 @implementation RecipesDetailViewController
@@ -24,7 +24,7 @@
 }
 
 
-- (void)setRecipe:(RecipeOld *)recipe
+- (void)setRecipe:(Recipe*)recipe
 {
     m_recipe = recipe;
     
@@ -39,6 +39,7 @@
 {
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.recipe.imageUrlString]];
 
+    self.title = self.recipe.name;
     self.labelDifficulty.text = @"diff";
     self.labelDateCreate.text = [self.recipe.dateCreate description];
     self.labelDateUpdate.text = [self.recipe.dateUpdate description];

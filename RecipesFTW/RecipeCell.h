@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class RecipeOld;
+@class Recipe;
 
 @interface RecipeCell : UITableViewCell
 
-@property (nonatomic, strong) RecipeOld* recipe;
+@property (nonatomic, strong) Recipe* recipe;
 @property (nonatomic, strong) NSIndexPath* indexPath;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewRecipe;

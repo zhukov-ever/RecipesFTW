@@ -13,6 +13,7 @@
 #import "RecipeManager.h"
 #import "RecipesRouter.h"
 
+#import "AlertManager.h"
 #import "PresentationRouter.h"
 
 @interface RecipesTableViewController()<UITableViewDataSource, UITableViewDelegate>
@@ -39,7 +40,7 @@
     [[RecipeManager shared] loadRecipesForce:NO completition:^{
        [self reloadData];
     } failure:^(NSError *error) {
-        
+        [self.refreshControl endRefreshing];
     }];
     
     
@@ -72,7 +73,8 @@
         [self.refreshControl endRefreshing];
         [self reloadData];
     } failure:^(NSError *error) {
-        
+        [self.refreshControl endRefreshing];
+        [[[AlertManager shared] alertForError:error] show];
     }];
 }
 
@@ -103,7 +105,7 @@
 {
     RecipeCell* _cell = [tableView dequeueReusableCellWithIdentifier:@"RecipeCell"];
     
-    RecipeOld* _recipe = [m_arrayRecipes objectAtIndex:indexPath.row];
+    Recipe* _recipe = [m_arrayRecipes objectAtIndex:indexPath.row];
     _cell.recipe = _recipe;
     _cell.indexPath = [indexPath copy];
     

@@ -1,29 +1,28 @@
-//
-//  Recipe.m
-//  RecipesFTW
-//
-//  Created by Zhn on 11/02/2015.
-//  Copyright (c) 2015 Zhn. All rights reserved.
-//
-
-#import "RecipeOld.h"
+#import "Recipe.h"
 #import "ObjectParser.h"
+#import "CoreDataManager.h"
 
-@implementation RecipeOld
+@interface Recipe ()
+
+// Private interface goes here.
+
+@end
+
+@implementation Recipe
 
 + (instancetype)objectFromDictionary:(NSDictionary *)dictionary
 {
-    RecipeOld* _recipe = [RecipeOld new];
+    Recipe* _recipe = [Recipe insertInManagedObjectContext:[[CoreDataManager shared] managedObjectContext]];
     
     NSNumber* _numberId = apiObj([dictionary objectForKey:@"id"], [NSNumber class]);
     if (!_numberId) return nil;
-    _recipe.realId = [_numberId integerValue];
+    [_recipe setRealId:_numberId];
     
     _recipe.name = apiObj([dictionary objectForKey:@"name"], [NSString class]);
     _recipe.desc = apiObj([dictionary objectForKey:@"description"], [NSString class]);
     _recipe.difficulty = apiObj([dictionary objectForKey:@"difficulty"], [NSNumber class]);
     NSNumber* _numberFavorite = apiObj([dictionary objectForKey:@"favorite"], [NSNumber class]);
-    _recipe.favorite = _numberFavorite ? [_numberFavorite boolValue] : NO;
+    _recipe.favorite = _numberFavorite;
     _recipe.instructions = apiObj([dictionary objectForKey:@"instructions"], [NSString class]);
     
     NSDateFormatter* _dateFormatter = [NSDateFormatter new];
@@ -38,6 +37,5 @@
     
     return _recipe;
 }
-
 
 @end
