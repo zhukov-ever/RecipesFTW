@@ -8,6 +8,7 @@
 
 #import "RecipesTableViewController.h"
 #import "SliderConfigurator.h"
+#import "ThemeManager.h"
 
 #import "RecipeCell.h"
 #import "RecipeManager.h"
@@ -45,6 +46,11 @@
     
     
     [[PresentationRouter new] gotoMeFrom:self];
+    
+    [[[ThemeManager shared] theme] navigationBar:self.navigationController.navigationBar];
+    [[[ThemeManager shared] theme] backgroundView:self.view];
+    [[[ThemeManager shared] theme] tableView:self.tableView];
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -110,6 +116,7 @@
     _cell.indexPath = [indexPath copy];
     
     
+    [[[ThemeManager shared] theme] cell:_cell];
     return _cell;
 }
 

@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import <AXRatingView/AXRatingView.h>
 #import "DateHelper.h"
+#import "ThemeManager.h"
 
 @interface RecipesDetailViewController()
 {
@@ -39,6 +40,16 @@
     {
         [self fillUI];
     }
+    
+    [[[ThemeManager shared] theme] navigationBar:self.navigationController.navigationBar];
+    [[[ThemeManager shared] theme] backgroundView:self.view];
+    [[[ThemeManager shared] theme] backgroundView:self.scrollView];
+    [[[ThemeManager shared] theme] imageView:self.imageView];
+    
+    [[[ThemeManager shared] theme] labelSecondary:self.labelDifficulty];
+    [[[ThemeManager shared] theme] labelSecondary:self.labelDateUpdate];
+    [[[ThemeManager shared] theme] textView:self.textViewInstructions];
+    [[[ThemeManager shared] theme] textView:self.textViewDescription];
 }
 
 - (void)viewDidLayoutSubviews
@@ -65,8 +76,7 @@
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.recipe.imageUrlString]];
 
     self.title = self.recipe.name;
-    self.labelDifficulty.text = @"diff";
-    self.labelDateUpdate.text = [[DateHelper dateFormatter] stringFromDate:self.recipe.dateUpdate];
+    self.labelDateUpdate.text = [@"Last update: " stringByAppendingString:[[DateHelper dateFormatter] stringFromDate:self.recipe.dateUpdate]];
     self.textViewInstructions.text = self.recipe.instructions;
     self.textViewDescription.text = self.recipe.desc;
     m_starControl.value = [self.recipe.difficulty doubleValue];

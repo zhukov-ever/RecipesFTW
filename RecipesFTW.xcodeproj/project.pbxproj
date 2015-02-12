@@ -27,6 +27,8 @@
 		CD50269E1A8D3789009BA7DC /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50269D1A8D3789009BA7DC /* AlertManager.m */; };
 		CD5026A41A8D5D4A009BA7DC /* ResizableTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5026A31A8D5D4A009BA7DC /* ResizableTextView.m */; };
 		CD5026A71A8D5FE1009BA7DC /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5026A61A8D5FE1009BA7DC /* DateHelper.m */; };
+		CD5167541A8D66A2006698A4 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5167531A8D66A2006698A4 /* ThemeManager.m */; };
+		CD5167571A8D6703006698A4 /* ThemeSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5167561A8D6703006698A4 /* ThemeSimple.m */; };
 		CD8F11A21A8A788700374E4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A11A8A788700374E4E /* main.m */; };
 		CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A41A8A788700374E4E /* AppDelegate.m */; };
 		CD8F11AB1A8A788700374E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11A91A8A788700374E4E /* Main.storyboard */; };
@@ -75,6 +77,11 @@
 		CD5026A31A8D5D4A009BA7DC /* ResizableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizableTextView.m; sourceTree = "<group>"; };
 		CD5026A51A8D5FE1009BA7DC /* DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateHelper.h; sourceTree = "<group>"; };
 		CD5026A61A8D5FE1009BA7DC /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateHelper.m; sourceTree = "<group>"; };
+		CD5167511A8D6693006698A4 /* Theming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theming.h; sourceTree = "<group>"; };
+		CD5167521A8D66A2006698A4 /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
+		CD5167531A8D66A2006698A4 /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
+		CD5167551A8D6703006698A4 /* ThemeSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeSimple.h; sourceTree = "<group>"; };
+		CD5167561A8D6703006698A4 /* ThemeSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeSimple.m; sourceTree = "<group>"; };
 		CD8F119C1A8A788700374E4E /* RecipesFTW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesFTW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8F11A01A8A788700374E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F11A11A8A788700374E4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +126,7 @@
 		CD1F50211A8A79F500AC1D6A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CD5167501A8D6675006698A4 /* Theme */,
 				CD1F50221A8A79FF00AC1D6A /* Data */,
 				CD1F50231A8A7A0700AC1D6A /* View */,
 			);
@@ -274,6 +282,18 @@
 				CD5026961A8D2D29009BA7DC /* Recipe.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CD5167501A8D6675006698A4 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CD5167511A8D6693006698A4 /* Theming.h */,
+				CD5167551A8D6703006698A4 /* ThemeSimple.h */,
+				CD5167561A8D6703006698A4 /* ThemeSimple.m */,
+				CD5167521A8D66A2006698A4 /* ThemeManager.h */,
+				CD5167531A8D66A2006698A4 /* ThemeManager.m */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 		CD8F11931A8A788700374E4E = {
@@ -446,6 +466,7 @@
 				CD5026A41A8D5D4A009BA7DC /* ResizableTextView.m in Sources */,
 				CD1F50331A8A871300AC1D6A /* SliderConfigurator.m in Sources */,
 				CDFB3F6F1A8BF327001EC16C /* RecipesDetailViewController.m in Sources */,
+				CD5167571A8D6703006698A4 /* ThemeSimple.m in Sources */,
 				CD1F50531A8A9EEA00AC1D6A /* ObjectParser.m in Sources */,
 				CD1F50371A8A87B300AC1D6A /* PresentationViewController.m in Sources */,
 				CD1F504F1A8A9B8800AC1D6A /* RecipeCell.m in Sources */,
@@ -463,6 +484,7 @@
 				CDFB3F6B1A8BE221001EC16C /* MenuRouter.m in Sources */,
 				CD50268C1A8C0D05009BA7DC /* PresentationRouter.m in Sources */,
 				CD5026971A8D2D29009BA7DC /* _Recipe.m in Sources */,
+				CD5167541A8D66A2006698A4 /* ThemeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

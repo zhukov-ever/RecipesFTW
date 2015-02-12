@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import <AXRatingView/AXRatingView.h>
 #import "DateHelper.h"
+#import "ThemeManager.h"
 
 @interface RecipeCell()
 {
@@ -35,6 +36,12 @@
         m_starControl.userInteractionEnabled = NO;
         [self.viewForStars addSubview:m_starControl];
     }
+    
+    [[[ThemeManager shared] theme] buttonFavorite:self.buttonFavorite];
+    [[[ThemeManager shared] theme] label:self.labelName];
+    [[[ThemeManager shared] theme] labelSecondary:self.labelDifficulty];
+    [[[ThemeManager shared] theme] labelSecondary:self.labelDateUpdate];
+    [[[ThemeManager shared] theme] imageView:self.imageViewRecipe];
 }
 
 - (void)setRecipe:(Recipe*)recipe
@@ -52,7 +59,7 @@
     m_starControl.value = [self.recipe.difficulty doubleValue];
     
     self.buttonFavorite.selected = [self.recipe.favorite boolValue];
-    self.labelDateUpdate.text = [[DateHelper dateFormatter] stringFromDate:self.recipe.dateUpdate];
+    self.labelDateUpdate.text = [@"Last update: " stringByAppendingString:[[DateHelper dateFormatter] stringFromDate:self.recipe.dateUpdate]];
 
     [self.imageViewRecipe sd_setImageWithURL:[NSURL URLWithString:self.recipe.imageUrlString]];
 
