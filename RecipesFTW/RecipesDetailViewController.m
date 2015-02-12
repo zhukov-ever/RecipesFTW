@@ -9,6 +9,15 @@
 #import "RecipesDetailViewController.h"
 #import "Recipe.h"
 #import "UIImageView+WebCache.h"
+#import <AXRatingView/AXRatingView.h>
+#import "DateHelper.h"
+
+@interface RecipesDetailViewController()
+{
+    AXRatingView* m_starControl;
+}
+
+@end
 
 @implementation RecipesDetailViewController
 @synthesize recipe = m_recipe;
@@ -17,12 +26,28 @@
 {
     [super viewDidLoad];
     
+    if (!m_starControl)
+    {
+        m_starControl = [[AXRatingView alloc] initWithFrame:[self.viewForStars bounds]];
+        m_starControl.value = 0;
+        m_starControl.stepInterval = 0.1;
+        m_starControl.userInteractionEnabled = NO;
+        [self.viewForStars addSubview:m_starControl];
+    }
+    
     if (self.recipe)
     {
         [self fillUI];
     }
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    [self.textViewInstructions setNeedsUpdateConstraints];
+    [self.textViewDescription setNeedsUpdateConstraints];
+}
 
 - (void)setRecipe:(Recipe*)recipe
 {
@@ -41,10 +66,11 @@
 
     self.title = self.recipe.name;
     self.labelDifficulty.text = @"diff";
-    self.labelDateCreate.text = [self.recipe.dateCreate description];
-    self.labelDateUpdate.text = [self.recipe.dateUpdate description];
-    self.labelInstructions.text = self.recipe.instructions;
-    self.labelDescription.text = self.recipe.desc;
+    self.labelDateUpdate.text = [[DateHelper dateFormatter] stringFromDate:self.recipe.dateUpdate];
+    self.textViewInstructions.text = self.recipe.instructions;
+    self.textViewDescription.text = self.recipe.desc;
+    m_starControl.value = [self.recipe.difficulty doubleValue];
+    
 }
 
 

@@ -25,6 +25,8 @@
 		CD5026981A8D2D29009BA7DC /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5026961A8D2D29009BA7DC /* Recipe.m */; };
 		CD50269B1A8D3052009BA7DC /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50269A1A8D3052009BA7DC /* CoreDataManager.m */; };
 		CD50269E1A8D3789009BA7DC /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50269D1A8D3789009BA7DC /* AlertManager.m */; };
+		CD5026A41A8D5D4A009BA7DC /* ResizableTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5026A31A8D5D4A009BA7DC /* ResizableTextView.m */; };
+		CD5026A71A8D5FE1009BA7DC /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5026A61A8D5FE1009BA7DC /* DateHelper.m */; };
 		CD8F11A21A8A788700374E4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A11A8A788700374E4E /* main.m */; };
 		CD8F11A51A8A788700374E4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F11A41A8A788700374E4E /* AppDelegate.m */; };
 		CD8F11AB1A8A788700374E4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F11A91A8A788700374E4E /* Main.storyboard */; };
@@ -69,6 +71,10 @@
 		CD50269A1A8D3052009BA7DC /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		CD50269C1A8D3789009BA7DC /* AlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
 		CD50269D1A8D3789009BA7DC /* AlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
+		CD5026A21A8D5D4A009BA7DC /* ResizableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizableTextView.h; sourceTree = "<group>"; };
+		CD5026A31A8D5D4A009BA7DC /* ResizableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizableTextView.m; sourceTree = "<group>"; };
+		CD5026A51A8D5FE1009BA7DC /* DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateHelper.h; sourceTree = "<group>"; };
+		CD5026A61A8D5FE1009BA7DC /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateHelper.m; sourceTree = "<group>"; };
 		CD8F119C1A8A788700374E4E /* RecipesFTW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesFTW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8F11A01A8A788700374E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F11A11A8A788700374E4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +190,10 @@
 				CD1F50321A8A871300AC1D6A /* SliderConfigurator.m */,
 				CD50269C1A8D3789009BA7DC /* AlertManager.h */,
 				CD50269D1A8D3789009BA7DC /* AlertManager.m */,
+				CD5026A21A8D5D4A009BA7DC /* ResizableTextView.h */,
+				CD5026A31A8D5D4A009BA7DC /* ResizableTextView.m */,
+				CD5026A51A8D5FE1009BA7DC /* DateHelper.h */,
+				CD5026A61A8D5FE1009BA7DC /* DateHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -433,6 +443,7 @@
 				CD5026911A8D2556009BA7DC /* Main.xcdatamodeld in Sources */,
 				CD1F502F1A8A813700AC1D6A /* RecipesTableViewController.m in Sources */,
 				CD50269B1A8D3052009BA7DC /* CoreDataManager.m in Sources */,
+				CD5026A41A8D5D4A009BA7DC /* ResizableTextView.m in Sources */,
 				CD1F50331A8A871300AC1D6A /* SliderConfigurator.m in Sources */,
 				CDFB3F6F1A8BF327001EC16C /* RecipesDetailViewController.m in Sources */,
 				CD1F50531A8A9EEA00AC1D6A /* ObjectParser.m in Sources */,
@@ -447,6 +458,7 @@
 				CD8F11A21A8A788700374E4E /* main.m in Sources */,
 				CD50269E1A8D3789009BA7DC /* AlertManager.m in Sources */,
 				CD1F503B1A8A885100AC1D6A /* AboutViewController.m in Sources */,
+				CD5026A71A8D5FE1009BA7DC /* DateHelper.m in Sources */,
 				CD1F504C1A8A926900AC1D6A /* RecipeManager.m in Sources */,
 				CDFB3F6B1A8BE221001EC16C /* MenuRouter.m in Sources */,
 				CD50268C1A8C0D05009BA7DC /* PresentationRouter.m in Sources */,

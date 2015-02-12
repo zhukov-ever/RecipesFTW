@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ResizableTextView.h"
 
 @class Recipe;
 
@@ -14,12 +15,13 @@
 
 @property (nonatomic, strong) Recipe* recipe;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *labelDifficulty;
 @property (weak, nonatomic) IBOutlet UILabel *labelDateUpdate;
-@property (weak, nonatomic) IBOutlet UILabel *labelDateCreate;
-@property (weak, nonatomic) IBOutlet UILabel *labelInstructions;
-@property (weak, nonatomic) IBOutlet UILabel *labelDescription;
+@property (weak, nonatomic) IBOutlet ResizableTextView *textViewInstructions;
+@property (weak, nonatomic) IBOutlet ResizableTextView *textViewDescription;
+@property (weak, nonatomic) IBOutlet UIView *viewForStars;
 
 
 @end

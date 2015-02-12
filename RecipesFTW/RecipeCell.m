@@ -11,6 +11,7 @@
 #import "RecipeManager.h"
 #import "UIImageView+WebCache.h"
 #import <AXRatingView/AXRatingView.h>
+#import "DateHelper.h"
 
 @interface RecipeCell()
 {
@@ -51,7 +52,7 @@
     m_starControl.value = [self.recipe.difficulty doubleValue];
     
     self.buttonFavorite.selected = [self.recipe.favorite boolValue];
-    self.labelDateUpdate.text = [self.recipe.dateUpdate description];
+    self.labelDateUpdate.text = [[DateHelper dateFormatter] stringFromDate:self.recipe.dateUpdate];
 
     [self.imageViewRecipe sd_setImageWithURL:[NSURL URLWithString:self.recipe.imageUrlString]];
 
