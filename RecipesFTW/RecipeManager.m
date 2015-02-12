@@ -8,7 +8,7 @@
 
 #import "RecipeManager.h"
 #import <AFNetworking/AFNetworking.h>
-
+#import <CoreData/CoreData.h>
 
 #define kBaseUrl @"http://hyper-recipes.herokuapp.com"
 #define kRecipes @"recipes"
@@ -56,7 +56,7 @@
      }];
 }
 
-- (void) recipe:(Recipe*)recipe setFavorite:(BOOL)isFavorite;
+- (void) recipe:(RecipeOld*)recipe setFavorite:(BOOL)isFavorite;
 {
     if (recipe)
     {
@@ -78,13 +78,13 @@
         {
             if ([_dictRecipe isKindOfClass:[NSDictionary class]])
             {
-                Recipe* _recipe = [Recipe objectFromDictionary:_dictRecipe];
+                RecipeOld* _recipe = [RecipeOld objectFromDictionary:_dictRecipe];
                 if (_recipe) [_array addObject:_recipe];
             }
         }
         self.arrayRecipes = [_array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            Recipe* _recipe1 = (Recipe*)obj1;
-            Recipe* _recipe2 = (Recipe*)obj2;
+            RecipeOld* _recipe1 = (RecipeOld*)obj1;
+            RecipeOld* _recipe2 = (RecipeOld*)obj2;
             return [_recipe2.dateUpdate compare:_recipe1.dateUpdate];
         }];
         

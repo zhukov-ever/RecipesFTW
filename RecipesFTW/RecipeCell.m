@@ -7,7 +7,7 @@
 //
 
 #import "RecipeCell.h"
-#import "Recipe.h"
+#import "RecipeOld.h"
 #import "RecipeManager.h"
 #import "UIImageView+WebCache.h"
 
@@ -22,10 +22,10 @@
 {
     [super awakeFromNib];
     
-    m_recipe.theId = NSNotFound;
+    m_recipe.realId = NSNotFound;
 }
 
-- (void)setRecipe:(Recipe *)recipe
+- (void)setRecipe:(RecipeOld *)recipe
 {
     if (recipe)
     {

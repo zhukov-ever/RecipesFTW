@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class Recipe;
+@class RecipeOld;
 
 @interface RecipesDetailViewController : UIViewController
 
-@property (nonatomic, strong) Recipe* recipe;
+@property (nonatomic, strong) RecipeOld* recipe;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *labelDifficulty;

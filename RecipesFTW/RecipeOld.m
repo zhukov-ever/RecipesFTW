@@ -6,18 +6,18 @@
 //  Copyright (c) 2015 Zhn. All rights reserved.
 //
 
-#import "Recipe.h"
+#import "RecipeOld.h"
 #import "ObjectParser.h"
 
-@implementation Recipe
+@implementation RecipeOld
 
 + (instancetype)objectFromDictionary:(NSDictionary *)dictionary
 {
-    Recipe* _recipe = [Recipe new];
+    RecipeOld* _recipe = [RecipeOld new];
     
     NSNumber* _numberId = apiObj([dictionary objectForKey:@"id"], [NSNumber class]);
     if (!_numberId) return nil;
-    _recipe.theId = [_numberId integerValue];
+    _recipe.realId = [_numberId integerValue];
     
     _recipe.name = apiObj([dictionary objectForKey:@"name"], [NSString class]);
     _recipe.desc = apiObj([dictionary objectForKey:@"description"], [NSString class]);

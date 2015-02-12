@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Recipe : NSObject
+@interface RecipeOld : NSObject
 
 + (instancetype) objectFromDictionary:(NSDictionary*)dictionary;
 
-@property (nonatomic) NSInteger theId;
+@property (nonatomic) NSInteger realId;
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* desc;
 @property (nonatomic, strong) NSNumber* difficulty;

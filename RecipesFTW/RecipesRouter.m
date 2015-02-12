@@ -8,7 +8,7 @@
 
 #import "RecipesRouter.h"
 #import "RecipesDetailViewController.h"
-#import "Recipe.h"
+#import "RecipeOld.h"
 
 @implementation RecipesRouter
 

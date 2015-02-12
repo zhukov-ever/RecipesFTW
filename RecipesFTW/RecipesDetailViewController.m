@@ -7,7 +7,7 @@
 //
 
 #import "RecipesDetailViewController.h"
-#import "Recipe.h"
+#import "RecipeOld.h"
 #import "UIImageView+WebCache.h"
 
 @implementation RecipesDetailViewController
@@ -24,7 +24,7 @@
 }
 
 
-- (void)setRecipe:(Recipe *)recipe
+- (void)setRecipe:(RecipeOld *)recipe
 {
     m_recipe = recipe;
     

@@ -7,7 +7,7 @@
 //
 
 #import "NVBaseSingleton.h"
-#import "Recipe.h"
+#import "RecipeOld.h"
 
 @interface RecipeManager : NVBaseSingleton
 
@@ -18,6 +18,6 @@
 @property (atomic, strong) NSArray* arrayRecipes;
 @property (atomic, strong) NSArray* arrayFavoriteRecipes;
 
-- (void) recipe:(Recipe*)recipe setFavorite:(BOOL)isFavorite;
+- (void) recipe:(RecipeOld*)recipe setFavorite:(BOOL)isFavorite;
 
 @end

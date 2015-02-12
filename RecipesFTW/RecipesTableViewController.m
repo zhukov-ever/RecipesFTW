@@ -103,7 +103,7 @@
 {
     RecipeCell* _cell = [tableView dequeueReusableCellWithIdentifier:@"RecipeCell"];
     
-    Recipe* _recipe = [m_arrayRecipes objectAtIndex:indexPath.row];
+    RecipeOld* _recipe = [m_arrayRecipes objectAtIndex:indexPath.row];
     _cell.recipe = _recipe;
     _cell.indexPath = [indexPath copy];
     
