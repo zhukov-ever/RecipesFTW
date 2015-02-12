@@ -16,14 +16,20 @@
     if ([segue identifier])
     {
         UINavigationController* _nc = [segue destinationViewController];
-        RecipesTableViewController* _vc = [[_nc viewControllers] firstObject];
+        UIViewController* _vc = [[_nc viewControllers] firstObject];
         if ([[segue identifier] isEqualToString:@"ShowFavoriteView"])
         {
-            _vc.state = RecipesViewControllerStateFavorite;
+            ((RecipesTableViewController*)_vc).state = RecipesViewControllerStateFavorite;
+            _vc.title = @"Recipes";
         }
         else if ([[segue identifier] isEqualToString:@"ShowRecipeView"])
         {
-            _vc.state = RecipesViewControllerStateNormal;
+            ((RecipesTableViewController*)_vc).state = RecipesViewControllerStateNormal;
+            _vc.title = @"Favorites";
+        }
+        else if ([[segue identifier] isEqualToString:@"ShowPresentationView"])
+        {
+            _vc.navigationItem.rightBarButtonItem = nil;
         }
     }
 }
