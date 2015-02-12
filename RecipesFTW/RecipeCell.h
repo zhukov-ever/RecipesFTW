@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelDifficulty;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFavorite;
 @property (weak, nonatomic) IBOutlet UILabel *labelDateUpdate;
+@property (weak, nonatomic) IBOutlet UIView *viewForStars;
 
 - (IBAction)favoriteHandler:(UIButton*)sender;
 

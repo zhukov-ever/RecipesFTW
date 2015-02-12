@@ -10,8 +10,12 @@
 #import "Recipe.h"
 #import "RecipeManager.h"
 #import "UIImageView+WebCache.h"
+#import <AXRatingView/AXRatingView.h>
 
 @interface RecipeCell()
+{
+    AXRatingView* m_starControl;
+}
 
 @end
 
@@ -21,6 +25,15 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    if (!m_starControl)
+    {
+        m_starControl = [[AXRatingView alloc] initWithFrame:[self.viewForStars bounds]];
+        m_starControl.value = 0;
+        m_starControl.stepInterval = 0.1;
+        m_starControl.userInteractionEnabled = NO;
+        [self.viewForStars addSubview:m_starControl];
+    }
 }
 
 - (void)setRecipe:(Recipe*)recipe
@@ -35,15 +48,8 @@
 - (void) fillUI
 {
     self.labelName.text = self.recipe.name;
-    if (self.recipe.difficulty)
-    {
-        self.labelDifficulty.hidden = NO;
-        self.labelDifficulty.text = [NSString stringWithFormat:@"difficulty: %@", self.recipe.difficulty];
-    }
-    else
-    {
-        self.labelDifficulty.hidden = YES;
-    }
+    m_starControl.value = [self.recipe.difficulty doubleValue];
+    
     self.buttonFavorite.selected = [self.recipe.favorite boolValue];
     self.labelDateUpdate.text = [self.recipe.dateUpdate description];
 
