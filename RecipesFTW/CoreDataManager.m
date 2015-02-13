@@ -76,7 +76,7 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     NSURL* _url = [[[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask] firstObject];
-    NSLog(@"%@",_url);
+    NSLog(@"db_path: %@",_url);
     return _url;
 }
 

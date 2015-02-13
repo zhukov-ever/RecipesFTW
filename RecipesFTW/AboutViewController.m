@@ -9,7 +9,6 @@
 #import "AboutViewController.h"
 #import "SliderConfigurator.h"
 #import "ThemeManager.h"
-#import "UIViewController+EmailSender.h"
 
 @implementation AboutViewController
 
@@ -33,7 +32,8 @@
 
 - (IBAction)emailHandler:(id)sender
 {
-    [self sendMailTo:self.labelEmail.text subject:@"yololo"];
+    NSURL* _url = [NSURL URLWithString:@"mailto://zhukov.ever@gmail.com"];
+    [[UIApplication sharedApplication] openURL:_url];
 }
 
 @end

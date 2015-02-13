@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E5FDE4B05EBE54B5C057699 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F368D85F432D0CDDABA5D849 /* libPods.a */; };
-		CD0FE0721A8E8F7E00C72843 /* UIViewController+EmailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0FE0711A8E8F7E00C72843 /* UIViewController+EmailSender.m */; };
 		CD1F50281A8A80BD00AC1D6A /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50271A8A80BD00AC1D6A /* MenuTableViewController.m */; };
 		CD1F502F1A8A813700AC1D6A /* RecipesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F502E1A8A813700AC1D6A /* RecipesTableViewController.m */; };
 		CD1F50331A8A871300AC1D6A /* SliderConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1F50321A8A871300AC1D6A /* SliderConfigurator.m */; };
@@ -42,8 +41,6 @@
 
 /* Begin PBXFileReference section */
 		21D8A37BBB48DA58DF32900F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		CD0FE0701A8E8F7E00C72843 /* UIViewController+EmailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EmailSender.h"; sourceTree = "<group>"; };
-		CD0FE0711A8E8F7E00C72843 /* UIViewController+EmailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EmailSender.m"; sourceTree = "<group>"; };
 		CD1F50261A8A80BD00AC1D6A /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		CD1F50271A8A80BD00AC1D6A /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		CD1F502D1A8A813700AC1D6A /* RecipesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesTableViewController.h; sourceTree = "<group>"; };
@@ -197,8 +194,6 @@
 		CD1F50301A8A86FA00AC1D6A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CD0FE0701A8E8F7E00C72843 /* UIViewController+EmailSender.h */,
-				CD0FE0711A8E8F7E00C72843 /* UIViewController+EmailSender.m */,
 				CD1F50311A8A871300AC1D6A /* SliderConfigurator.h */,
 				CD1F50321A8A871300AC1D6A /* SliderConfigurator.m */,
 				CD50269C1A8D3789009BA7DC /* AlertManager.h */,
@@ -488,7 +483,6 @@
 				CD1F504C1A8A926900AC1D6A /* RecipeManager.m in Sources */,
 				CDFB3F6B1A8BE221001EC16C /* MenuRouter.m in Sources */,
 				CD50268C1A8C0D05009BA7DC /* PresentationRouter.m in Sources */,
-				CD0FE0721A8E8F7E00C72843 /* UIViewController+EmailSender.m in Sources */,
 				CD5026971A8D2D29009BA7DC /* _Recipe.m in Sources */,
 				CD5167541A8D66A2006698A4 /* ThemeManager.m in Sources */,
 			);
