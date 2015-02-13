@@ -37,7 +37,7 @@
     [navigationBar setTintColor:[UIColor colorWithHexString:@"#F3D9DC"]];
     [navigationBar setTitleTextAttributes:@{
                                             NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#F3D9DC"],
-                                            NSFontAttributeName:[UIFont fontWithName:kFontItalic size:18]
+                                            NSFontAttributeName:[UIFont fontWithName:kFontItalic size:19]
                                             }];
 }
 
@@ -79,6 +79,10 @@
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 }
+
+
+
+
 - (void) menuTableView:(UITableView*)tableView
 {
     [tableView setBackgroundColor:[UIColor colorWithHexString:@"#744253"]];
@@ -93,8 +97,8 @@
 {
     label.textColor = [UIColor colorWithHexString:@"F3D9DC"];
     NSDictionary* _attributes = @{
-                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:16],
-                                  NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)
+                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:19],
+                                  //NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)
                                   };
     label.attributedText = [[NSAttributedString alloc] initWithString:label.text
                                                            attributes:_attributes];
