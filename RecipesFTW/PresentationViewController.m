@@ -8,6 +8,7 @@
 
 #import "PresentationViewController.h"
 #import "SliderConfigurator.h"
+#import "ThemeManager.h"
 
 @interface PresentationViewController () <UIScrollViewDelegate>
 
@@ -21,6 +22,9 @@
     [SliderConfigurator switchOnSwipe:self];
     
     self.scrollView.delegate = self;
+    
+    [[[ThemeManager shared] theme] navigationBar:self.navigationController.navigationBar];
+    [[[ThemeManager shared] theme] navigationBarButtonMenu:self.navigationItem.leftBarButtonItem];
 }
 
 - (IBAction)menuHandler:(id)sender

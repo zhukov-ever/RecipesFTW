@@ -41,6 +41,12 @@
                                             }];
 }
 
+- (void) navigationBarButtonMenu:(UIBarButtonItem*)barButton
+{
+    [barButton setTitle:@""];
+    [barButton setImage:[UIImage imageNamed:@"menu"]];
+}
+
 - (void) backgroundView:(UIView*)view
 {
     [view setBackgroundColor:[UIColor colorWithHexString:@"#F3D9DC"]];
@@ -62,7 +68,7 @@
 
 - (void) cell:(UITableViewCell*)cell
 {
-    [cell setBackgroundColor:[UIColor clearColor]];
+    [cell setBackgroundColor:[UIColor colorWithHexString:@"#F3D9DC"]];
     [cell setSeparatorInset:UIEdgeInsetsZero];
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
@@ -83,6 +89,16 @@
 {
     label.textColor = [UIColor colorWithHexString:@"744253"];
     label.font = [UIFont fontWithName:kFontLightItalic size:14];
+}
+- (void) labelLink:(UILabel*)label
+{
+    label.textColor = [UIColor colorWithHexString:@"744253"];
+    NSDictionary* _attributes = @{
+                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:16],
+                                  NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)
+                                  };
+    label.attributedText = [[NSAttributedString alloc] initWithString:label.text
+                                                           attributes:_attributes];
 }
 
 - (void) buttonFavorite:(UIButton*)button

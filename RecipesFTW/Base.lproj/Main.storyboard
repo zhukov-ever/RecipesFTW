@@ -319,10 +319,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-zJ-skm" customClass="ResizableTextView">
-                                                <rect key="frame" x="0.0" y="427" width="320" height="77"/>
+                                                <rect key="frame" x="0.0" y="427" width="320" height="28"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="77" id="O0n-WT-q3q"/>
+                                                    <constraint firstAttribute="height" constant="28" id="O0n-WT-q3q"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -351,7 +351,7 @@
                                             <constraint firstAttribute="trailing" secondItem="pQK-qV-vfN" secondAttribute="trailing" id="gEf-KH-4D4"/>
                                             <constraint firstItem="pQK-qV-vfN" firstAttribute="leading" secondItem="YPa-JO-qOc" secondAttribute="leading" id="gMc-7f-jme"/>
                                             <constraint firstItem="hwv-zJ-skm" firstAttribute="leading" secondItem="YPa-JO-qOc" secondAttribute="leading" id="gMt-Bv-2br"/>
-                                            <constraint firstAttribute="bottom" secondItem="hwv-zJ-skm" secondAttribute="bottom" id="icy-9y-5HW"/>
+                                            <constraint firstAttribute="bottom" secondItem="hwv-zJ-skm" secondAttribute="bottom" constant="49" id="icy-9y-5HW"/>
                                             <constraint firstItem="a42-Zb-5KJ" firstAttribute="top" secondItem="vfC-Ji-DRg" secondAttribute="bottom" constant="4" id="knP-cA-w83"/>
                                             <constraint firstItem="hwv-zJ-skm" firstAttribute="top" secondItem="pQK-qV-vfN" secondAttribute="bottom" constant="8" id="l3E-ee-bDe"/>
                                             <constraint firstItem="flz-oS-Q6n" firstAttribute="leading" secondItem="YPa-JO-qOc" secondAttribute="leading" id="nW1-6r-ePg"/>
@@ -653,14 +653,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zhukov.ever@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN9-ST-lXf">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zhukov.ever@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN9-ST-lXf">
                                 <rect key="frame" x="16" y="241" width="288" height="21"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="eVa-lK-cpc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="M2b-ja-Sup" appends="YES" id="I6T-r1-sSW"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nikita Zhukov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssn-Zj-oW7">
                                 <rect key="frame" x="16" y="212" width="288" height="21"/>
@@ -689,8 +693,17 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="labelEmail" destination="dN9-ST-lXf" id="9rg-Vo-Thl"/>
+                        <outlet property="labelName" destination="Ssn-Zj-oW7" id="ewV-YR-cCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8I-07-Ytd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="M2b-ja-Sup">
+                    <connections>
+                        <action selector="emailHandler:" destination="0bb-u7-ZWC" id="PSP-Te-7eW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-78" y="969"/>
         </scene>

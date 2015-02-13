@@ -48,6 +48,7 @@
     [[PresentationRouter new] gotoMeFrom:self];
     
     [[[ThemeManager shared] theme] navigationBar:self.navigationController.navigationBar];
+    [[[ThemeManager shared] theme] navigationBarButtonMenu:self.navigationItem.leftBarButtonItem];
     [[[ThemeManager shared] theme] backgroundView:self.view];
     [[[ThemeManager shared] theme] tableView:self.tableView];
 

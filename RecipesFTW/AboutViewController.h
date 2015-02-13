@@ -10,4 +10,9 @@
 
 @interface AboutViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *labelEmail;
+
+- (IBAction)emailHandler:(id)sender;
+
 @end

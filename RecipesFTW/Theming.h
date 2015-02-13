@@ -17,16 +17,19 @@
 @class UIImageView;
 @class UITextView;
 @class AXRatingView;
+@class UIBarButtonItem;
 
 @protocol Theming <NSObject>
 
 - (void) navigationBar:(UINavigationBar*)navigationBar;
+- (void) navigationBarButtonMenu:(UIBarButtonItem*)barButton;
 - (void) backgroundView:(UIView*)view;
 - (void) tableView:(UITableView*)tableView;
 - (void) cell:(UITableViewCell*)cell;
 
 - (void) label:(UILabel*)label;
 - (void) labelSecondary:(UILabel*)label;
+- (void) labelLink:(UILabel*)label;
 - (void) buttonFavorite:(UIButton*)button;
 - (void) imageView:(UIImageView*)imageView;
 - (void) textView:(UITextView*)textView;
