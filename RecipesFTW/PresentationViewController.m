@@ -25,6 +25,23 @@
     
     [[[ThemeManager shared] theme] navigationBar:self.navigationController.navigationBar];
     [[[ThemeManager shared] theme] navigationBarButtonMenu:self.navigationItem.leftBarButtonItem];
+    [[[ThemeManager shared] theme] navigationBarButtonSkip:self.navigationItem.rightBarButtonItem];
+    
+    [[[ThemeManager shared] theme] backgroundView:self.view];
+    [[[ThemeManager shared] theme] pageControl:self.pageControl];
+    
+    for (UILabel* _label in self.arrayTitle)
+    {
+        [[[ThemeManager shared] theme] label:_label];
+    }
+    for (UIImageView* _imageView in self.arrayImageView)
+    {
+        [[[ThemeManager shared] theme] presentationImageView:_imageView];
+    }
+    
+    [self.arrayImageView[0] setImage:[UIImage imageNamed:@"ponu"]];
+    [self.arrayImageView[1] setImage:[UIImage imageNamed:@"drako"]];
+    [self.arrayImageView[2] setImage:[UIImage imageNamed:@"corn"]];
 }
 
 - (IBAction)menuHandler:(id)sender
@@ -40,7 +57,6 @@
 
 
 #pragma mark - UIScrollViewDelegate
-
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

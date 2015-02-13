@@ -18,11 +18,13 @@
 @class UITextView;
 @class AXRatingView;
 @class UIBarButtonItem;
+@class UIPageControl;
 
 @protocol Theming <NSObject>
 
 - (void) navigationBar:(UINavigationBar*)navigationBar;
 - (void) navigationBarButtonMenu:(UIBarButtonItem*)barButton;
+- (void) navigationBarButtonSkip:(UIBarButtonItem*)barButton;
 - (void) backgroundView:(UIView*)view;
 
 
@@ -37,12 +39,13 @@
 
 - (void) label:(UILabel*)label;
 - (void) labelSecondary:(UILabel*)label;
-
-
 - (void) labelLink:(UILabel*)label;
 - (void) buttonFavorite:(UIButton*)button;
 - (void) imageView:(UIImageView*)imageView;
 - (void) textView:(UITextView*)textView;
 - (void) ratingVeiw:(AXRatingView*)ratingVeiw;
+- (void) pageControl:(UIPageControl*)pageControl;
+
+- (void) presentationImageView:(UIImageView*)imageView;
 
 @end

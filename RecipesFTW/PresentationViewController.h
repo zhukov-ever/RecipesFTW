@@ -16,4 +16,8 @@
 - (IBAction)menuHandler:(id)sender;
 - (IBAction)skipHandler:(id)sender;
 
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *arrayImageView;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *arrayTitle;
+
+
 @end

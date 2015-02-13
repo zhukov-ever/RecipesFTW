@@ -123,7 +123,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DmB-0u-vph" id="qiP-6v-VaT">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About me" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sr-5f-AOm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sr-5f-AOm">
                                                     <rect key="frame" x="15" y="12" width="200" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="sVl-F1-Lga"/>
@@ -431,7 +431,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePc-IF-zw2">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slide 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edr-ox-Rih">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magic as Unicorn..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edr-ox-Rih">
                                                         <rect key="frame" x="8" y="8" width="304" height="74"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="74" id="096-WM-H1y"/>
@@ -440,7 +440,7 @@
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-r5-ZWC">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-r5-ZWC">
                                                         <rect key="frame" x="40" y="132" width="240" height="240"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -449,7 +449,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="centerY" secondItem="g3K-r5-ZWC" secondAttribute="centerY" id="7BO-IT-PzT"/>
                                                     <constraint firstItem="edr-ox-Rih" firstAttribute="leading" secondItem="ePc-IF-zw2" secondAttribute="leading" constant="8" id="BkL-ab-vZt"/>
@@ -462,7 +462,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sk2-WB-h5F">
                                                 <rect key="frame" x="320" y="0.0" width="320" height="504"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slide 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-Fs-q9B">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stable as Dragon..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-Fs-q9B">
                                                         <rect key="frame" x="8" y="8" width="304" height="74"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="74" id="jyg-fY-hdb"/>
@@ -471,7 +471,7 @@
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hu0-fr-luc">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hu0-fr-luc">
                                                         <rect key="frame" x="40" y="132" width="240" height="240"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -480,7 +480,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.010051519906341788" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="ACk-Fs-q9B" firstAttribute="top" secondItem="Sk2-WB-h5F" secondAttribute="top" constant="8" id="F1t-4S-S0y"/>
                                                     <constraint firstAttribute="centerY" secondItem="hu0-fr-luc" secondAttribute="centerY" id="OyM-cj-bQP"/>
@@ -493,15 +493,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aao-AL-1sA">
                                                 <rect key="frame" x="640" y="0.0" width="320" height="504"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jnz-z8-Pma">
-                                                        <rect key="frame" x="40" y="132" width="240" height="240"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="240" id="6zl-sN-2y8"/>
-                                                            <constraint firstAttribute="height" constant="240" id="lg6-hf-cIr"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slide 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjO-fa-r7n">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sit comfortable and  take your Popcorn! :D" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjO-fa-r7n">
                                                         <rect key="frame" x="8" y="8" width="304" height="74"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="74" id="6jc-wv-j4w"/>
@@ -510,8 +502,16 @@
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jnz-z8-Pma">
+                                                        <rect key="frame" x="40" y="132" width="240" height="240"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="240" id="6zl-sN-2y8"/>
+                                                            <constraint firstAttribute="height" constant="240" id="lg6-hf-cIr"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.085932481331151944" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="yjO-fa-r7n" secondAttribute="trailing" constant="8" id="DCz-uZ-CBp"/>
                                                     <constraint firstAttribute="centerY" secondItem="jnz-z8-Pma" secondAttribute="centerY" id="M8T-3m-kaN"/>
@@ -522,7 +522,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Sk2-WB-h5F" firstAttribute="leading" secondItem="ePc-IF-zw2" secondAttribute="trailing" id="14Z-bF-bz5"/>
                                             <constraint firstItem="ePc-IF-zw2" firstAttribute="top" secondItem="cxE-Hj-DfE" secondAttribute="top" id="IOs-cI-UVM"/>
@@ -581,6 +581,12 @@
                     <connections>
                         <outlet property="pageControl" destination="ocH-Ft-7I4" id="WU4-Tn-k22"/>
                         <outlet property="scrollView" destination="ndq-fi-Nhg" id="Z7o-nB-0fG"/>
+                        <outletCollection property="arrayImageView" destination="g3K-r5-ZWC" id="2ma-1g-cdm"/>
+                        <outletCollection property="arrayImageView" destination="hu0-fr-luc" id="nSA-DJ-z0T"/>
+                        <outletCollection property="arrayImageView" destination="jnz-z8-Pma" id="HEG-H5-iKl"/>
+                        <outletCollection property="arrayTitle" destination="edr-ox-Rih" id="knU-ZP-dzy"/>
+                        <outletCollection property="arrayTitle" destination="ACk-Fs-q9B" id="B9l-2T-NuR"/>
+                        <outletCollection property="arrayTitle" destination="yjO-fa-r7n" id="32E-b5-Qc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gf3-H7-1Kp" userLabel="First Responder" sceneMemberID="firstResponder"/>

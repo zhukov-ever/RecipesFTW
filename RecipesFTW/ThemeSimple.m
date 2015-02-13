@@ -11,20 +11,13 @@
 #import "UIColor+NVProps.h"
 #import <AXRatingView/AXRatingView.h>
 
-#define kFontNormal @"HelveticaNeue"
 #define kFontBoldItalic @"HelveticaNeue-BoldItalic"
-#define kFontLight @"HelveticaNeue-Light"
 #define kFontItalic @"HelveticaNeue-Italic"
 #define kFontUltraLightItalic @"HelveticaNeue-UltraLightItalic"
-#define kFontCondensedBold @"HelveticaNeue-CondensedBold"
 #define kFontMediumItalic @"HelveticaNeue-MediumItalic"
-#define kFontThin @"HelveticaNeue-Thin"
-#define kFontMedium @"HelveticaNeue-Medium"
 #define kFontThinItalic @"HelveticaNeue-ThinItalic"
 #define kFontLightItalic @"HelveticaNeue-LightItalic"
-#define kFontUltraLight @"HelveticaNeue-UltraLight"
-#define kFontBold @"HelveticaNeue-Bold"
-#define kFontCondensedBlack @"HelveticaNeue-CondensedBlack"
+
 
 @implementation ThemeSimple
 
@@ -34,9 +27,9 @@
                                                          forBarMetrics:UIBarMetricsDefault];
     
     [navigationBar setBarTintColor:[UIColor colorWithHexString:@"744253"]];
-    [navigationBar setTintColor:[UIColor colorWithHexString:@"#F3D9DC"]];
+    [navigationBar setTintColor:[UIColor colorWithHexString:@"F3D9DC"]];
     [navigationBar setTitleTextAttributes:@{
-                                            NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#F3D9DC"],
+                                            NSForegroundColorAttributeName:[UIColor colorWithHexString:@"F3D9DC"],
                                             NSFontAttributeName:[UIFont fontWithName:kFontItalic size:19]
                                             }];
 }
@@ -47,15 +40,21 @@
     [barButton setImage:[UIImage imageNamed:@"menu"]];
 }
 
+- (void) navigationBarButtonSkip:(UIBarButtonItem*)barButton
+{
+    [barButton setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:kFontItalic size:16]}
+                             forState:UIControlStateNormal];
+}
+
 
 - (void) backgroundView:(UIView*)view
 {
-    [view setBackgroundColor:[UIColor colorWithHexString:@"#F3D9DC"]];
+    [view setBackgroundColor:[UIColor colorWithHexString:@"F3D9DC"]];
 }
 
 - (void) tableView:(UITableView*)tableView
 {
-    [tableView setBackgroundColor:[UIColor colorWithHexString:@"#F3D9DC"]];
+    [tableView setBackgroundColor:[UIColor colorWithHexString:@"F3D9DC"]];
     [tableView setSeparatorInset:UIEdgeInsetsZero];
     if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) {
         [tableView setLayoutMargins:UIEdgeInsetsZero];
@@ -64,12 +63,12 @@
         [tableView setPreservesSuperviewLayoutMargins:NO];
     }
     
-    tableView.separatorColor = [UIColor colorWithHexString:@"#B49286"];
+    tableView.separatorColor = [UIColor colorWithHexString:@"B49286"];
 }
 
 - (void) cell:(UITableViewCell*)cell
 {
-    [cell setBackgroundColor:[UIColor colorWithHexString:@"#F3D9DC"]];
+    [cell setBackgroundColor:[UIColor colorWithHexString:@"F3D9DC"]];
     [cell setSeparatorInset:UIEdgeInsetsZero];
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
@@ -85,20 +84,19 @@
 
 - (void) menuTableView:(UITableView*)tableView
 {
-    [tableView setBackgroundColor:[UIColor colorWithHexString:@"#744253"]];
+    [tableView setBackgroundColor:[UIColor colorWithHexString:@"744253"]];
     [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 - (void) menuCell:(UITableViewCell*)cell
 {
-    [cell setBackgroundColor:[UIColor colorWithHexString:@"#744253"]];
+    [cell setBackgroundColor:[UIColor colorWithHexString:@"744253"]];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 }
 - (void) menuLabel:(UILabel*)label
 {
     label.textColor = [UIColor colorWithHexString:@"F3D9DC"];
     NSDictionary* _attributes = @{
-                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:19],
-                                  //NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)
+                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:19]
                                   };
     label.attributedText = [[NSAttributedString alloc] initWithString:label.text
                                                            attributes:_attributes];
@@ -151,6 +149,19 @@
     ratingVeiw.highlightColor = [UIColor colorWithHexString:@"744253"];
     ratingVeiw.baseColor = [UIColor colorWithHexString:@"D7BEA8"];
 }
+- (void) pageControl:(UIPageControl*)pageControl
+{
+    [pageControl setPageIndicatorTintColor:[UIColor colorWithHexString:@"B49286"]];
+    [pageControl setCurrentPageIndicatorTintColor:[UIColor colorWithHexString:@"744253"]];
+}
 
+
+
+- (void) presentationImageView:(UIImageView*)imageView
+{
+    imageView.backgroundColor = [UIColor colorWithHexString:@"C78283"];
+    imageView.layer.cornerRadius = CGRectGetWidth(imageView.frame) / 2;
+    imageView.clipsToBounds = YES;
+}
 
 @end
