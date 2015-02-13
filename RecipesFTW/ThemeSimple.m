@@ -47,6 +47,7 @@
     [barButton setImage:[UIImage imageNamed:@"menu"]];
 }
 
+
 - (void) backgroundView:(UIView*)view
 {
     [view setBackgroundColor:[UIColor colorWithHexString:@"#F3D9DC"]];
@@ -78,6 +79,28 @@
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 }
+- (void) menuTableView:(UITableView*)tableView
+{
+    [tableView setBackgroundColor:[UIColor colorWithHexString:@"#744253"]];
+    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+}
+- (void) menuCell:(UITableViewCell*)cell
+{
+    [cell setBackgroundColor:[UIColor colorWithHexString:@"#744253"]];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+}
+- (void) menuLabel:(UILabel*)label
+{
+    label.textColor = [UIColor colorWithHexString:@"F3D9DC"];
+    NSDictionary* _attributes = @{
+                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:16],
+                                  NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)
+                                  };
+    label.attributedText = [[NSAttributedString alloc] initWithString:label.text
+                                                           attributes:_attributes];
+}
+
+
 
 - (void) label:(UILabel*)label
 {

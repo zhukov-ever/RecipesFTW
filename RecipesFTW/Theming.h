@@ -24,8 +24,13 @@
 - (void) navigationBar:(UINavigationBar*)navigationBar;
 - (void) navigationBarButtonMenu:(UIBarButtonItem*)barButton;
 - (void) backgroundView:(UIView*)view;
+
 - (void) tableView:(UITableView*)tableView;
 - (void) cell:(UITableViewCell*)cell;
+
+- (void) menuTableView:(UITableView*)tableView;
+- (void) menuCell:(UITableViewCell*)cell;
+- (void) menuLabel:(UILabel*)label;
 
 - (void) label:(UILabel*)label;
 - (void) labelSecondary:(UILabel*)label;

@@ -10,4 +10,9 @@
 
 @interface MenuTableViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *arrayCell;
+
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *arrayCellTitle;
+
+
 @end

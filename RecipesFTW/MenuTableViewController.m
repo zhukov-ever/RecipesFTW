@@ -8,6 +8,7 @@
 
 #import "MenuTableViewController.h"
 #import "MenuRouter.h"
+#import "ThemeManager.h"
 
 @implementation MenuTableViewController
 
@@ -15,11 +16,22 @@
 {
     [super viewDidLoad];
     
+    [[[ThemeManager shared] theme] menuTableView:self.tableView];
+    for (UILabel* _label in self.arrayCellTitle)
+    {
+        [[[ThemeManager shared] theme] menuLabel:_label];
+    }
+    for (UITableViewCell* _cell in self.arrayCell)
+    {
+        [[[ThemeManager shared] theme] menuCell:_cell];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [[MenuRouter new] prepareForSegue:segue sender:sender];
+    
+    
 }
 
 
