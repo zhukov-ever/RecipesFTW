@@ -54,6 +54,11 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size
+       withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
 
 
 #pragma mark - UIScrollViewDelegate

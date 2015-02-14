@@ -11,6 +11,7 @@
 @interface MenuTableViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *arrayCell;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewFavorite;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *arrayCellTitle;
 

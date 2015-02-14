@@ -17,6 +17,7 @@
     [super viewDidLoad];
     
     [[[ThemeManager shared] theme] menuTableView:self.tableView];
+    [[[ThemeManager shared] theme] menuFavoriteIco:self.imageViewFavorite];
     for (UILabel* _label in self.arrayCellTitle)
     {
         [[[ThemeManager shared] theme] menuLabel:_label];

@@ -125,6 +125,7 @@
     }
     
     tableView.separatorColor = [UIColor colorWithHexString:kColorNeutral];
+    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void) cell:(UITableViewCell*)cell
@@ -162,6 +163,10 @@
                                   };
     label.attributedText = [[NSAttributedString alloc] initWithString:label.text
                                                            attributes:_attributes];
+}
+- (void) menuFavoriteIco:(UIImageView*)imageView
+{
+    [imageView setImage:[UIImage imageNamed:@"button-fav-s"]];
 }
 
 

@@ -41,6 +41,7 @@
 - (void) menuTableView:(UITableView*)tableView;
 - (void) menuCell:(UITableViewCell*)cell;
 - (void) menuLabel:(UILabel*)label;
+- (void) menuFavoriteIco:(UIImageView*)imageView;
 
 - (void) presentationImageView:(UIImageView*)imageView;
 
