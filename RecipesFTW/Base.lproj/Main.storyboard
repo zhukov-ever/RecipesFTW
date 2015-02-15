@@ -484,12 +484,13 @@
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="flz-oS-Q6n" secondAttribute="height" multiplier="1:1" priority="500" id="eI5-Vo-t5R"/>
-                                                    <constraint firstAttribute="height" constant="500" id="epj-1t-8Ru"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="epj-1t-8Ru"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="hCp-w9-Tcu"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="epj-1t-8Ru"/>
+                                                        <exclude reference="hCp-w9-Tcu"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
