@@ -11,12 +11,12 @@
 #import "UIColor+NVProps.h"
 #import <AXRatingView/AXRatingView.h>
 
-#define kFontBoldItalic @"HelveticaNeue-BoldItalic"
-#define kFontItalic @"HelveticaNeue-Italic"
-#define kFontUltraLightItalic @"HelveticaNeue-UltraLightItalic"
-#define kFontMediumItalic @"HelveticaNeue-MediumItalic"
-#define kFontThinItalic @"HelveticaNeue-ThinItalic"
-#define kFontLightItalic @"HelveticaNeue-LightItalic"
+#define kFontBold @"HelveticaNeue-BoldItalic"
+#define kFontNormal @"HelveticaNeue-Italic"
+#define kFontUltraLight @"HelveticaNeue-UltraLightItalic"
+#define kFontMedium @"HelveticaNeue-MediumItalic"
+#define kFontThin @"HelveticaNeue-ThinItalic"
+#define kFontLight @"HelveticaNeue-LightItalic"
 
 #define kColorLight @"F3D9DC"
 #define kColorLightSecondary @"D7BEA8"
@@ -38,7 +38,7 @@
     [navigationBar setTintColor:[UIColor colorWithHexString:kColorLight]];
     [navigationBar setTitleTextAttributes:@{
                                             NSForegroundColorAttributeName:[UIColor colorWithHexString:kColorLight],
-                                            NSFontAttributeName:[UIFont fontWithName:kFontItalic size:19]
+                                            NSFontAttributeName:[UIFont fontWithName:kFontNormal size:19]
                                             }];
 }
 
@@ -51,7 +51,7 @@
 
 - (void) navigationBarButtonSkip:(UIBarButtonItem*)barButton
 {
-    [barButton setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:kFontItalic size:16]}
+    [barButton setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:kFontNormal size:16]}
                              forState:UIControlStateNormal];
 }
 
@@ -61,19 +61,19 @@
 - (void) label:(UILabel*)label
 {
     label.textColor = [UIColor colorWithHexString:kColorDark];
-    label.font = [UIFont fontWithName:kFontItalic size:16];
+    label.font = [UIFont fontWithName:kFontNormal size:16];
 }
 
 - (void) labelSecondary:(UILabel*)label
 {
     label.textColor = [UIColor colorWithHexString:kColorDark];
-    label.font = [UIFont fontWithName:kFontLightItalic size:14];
+    label.font = [UIFont fontWithName:kFontLight size:14];
 }
 - (void) labelLink:(UILabel*)label
 {
     label.textColor = [UIColor colorWithHexString:kColorDark];
     NSDictionary* _attributes = @{
-                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:16],
+                                  NSFontAttributeName:[UIFont fontWithName:kFontNormal size:16],
                                   NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)
                                   };
     label.attributedText = [[NSAttributedString alloc] initWithString:label.text
@@ -96,7 +96,7 @@
 {
     textView.backgroundColor = [UIColor clearColor];
     textView.textColor = [UIColor colorWithHexString:kColorDark];
-    textView.font = [UIFont fontWithName:kFontItalic size:14];
+    textView.font = [UIFont fontWithName:kFontNormal size:14];
 }
 - (void) ratingVeiw:(AXRatingView*)ratingVeiw
 {
@@ -159,7 +159,7 @@
 {
     label.textColor = [UIColor colorWithHexString:kColorLight];
     NSDictionary* _attributes = @{
-                                  NSFontAttributeName:[UIFont fontWithName:kFontItalic size:19]
+                                  NSFontAttributeName:[UIFont fontWithName:kFontNormal size:19]
                                   };
     label.attributedText = [[NSAttributedString alloc] initWithString:label.text
                                                            attributes:_attributes];
